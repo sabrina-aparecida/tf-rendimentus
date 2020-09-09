@@ -1,4 +1,9 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import * as firebase from 'firebase';
 import './App.css';
 import Login from './pages/login';
@@ -17,12 +22,6 @@ const firebaseConfig = {
 const appFirebase = firebase.initializeApp(firebaseConfig);
 
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
 
 
 function App() {

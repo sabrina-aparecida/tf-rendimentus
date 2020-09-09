@@ -3,21 +3,24 @@ import ItemBank from '../../components/itemBank'
 import './style.css'
 
 
-
 function ListBank() {
   const [banks, setBanks] = useState([])
 
   useEffect(() => {
-    api
-      .get("banks"
-      )
+    fetch('https://jsonbox.io/box_ddb0ab5da8d69da8c315/banks')
       .then((response) => {
-        setBanks(response.data);
+        return response.json();
+      })
+      .then((data) => {
+        setBanks(data);
+
       })
       .catch((e) => {
         alert("ocorreu um erro ao tentar obter os dados");
       });
   }, []);
+
+
 
   return (
     <>
@@ -25,7 +28,7 @@ function ListBank() {
       <ul>
         {banks.map(item => (<ItemBank numBank={item.bankNumber} nameBank={item.name} saldoAcount={item.saldo} />))}
       </ul>
-      <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:   R$   R$: 5.000,00</span>
+      <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:   R$: 5.000,00</span>
 
     </>
   )

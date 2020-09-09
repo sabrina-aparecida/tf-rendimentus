@@ -7,7 +7,7 @@ import {
 import * as firebase from 'firebase';
 import Login from './pages/login';
 import Home from './pages/home';
-import Oferts from './pages/oferts';
+import Offers from './pages/offers';
 import ListBank from './pages/listBank';
 
 const firebaseConfig = {
@@ -33,8 +33,8 @@ function App() {
         <Route path="/home">
           <Home />
         </Route>
-        <Route path="/oferts">
-          <Oferts />
+        <Route path="/offers">
+          <Offers />
         </Route>
         <Route path="/listBank">
           <ListBank />

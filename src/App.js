@@ -2,13 +2,19 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
+
+  Route,
+  Redirect,
+} from "react-router-dom";
   Route
 } from "react-router-dom";
+
 import * as firebase from 'firebase';
 import './App.css';
 import Login from './pages/login';
 import Home from './pages/home';
 import Services from './pages/services';
+import ListBank from './pages/listBank';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAka5GTL8jbx5CGnHndNX_flBeNqeXMNvw",
@@ -22,23 +28,24 @@ const firebaseConfig = {
 const appFirebase = firebase.initializeApp(firebaseConfig);
 
 
-
-
 function App() {
-    
+
   return (
     <Router>
-              <Switch>
-          <Route path="/" exact={true}>
-            <Login />
-          </Route>
-          <Route path="/home">
-            <Home/>
-          </Route>
-          <Route path="/services">
-            <Services/>
-            </Route>          
-            </Switch>
+      <Switch>
+        <Route path="/" exact={true}>
+          <Login />
+        </Route>
+        <Route path="/home">
+          <Home />
+        </Route>
+        <Route path="/services">
+          <Services />
+        </Route>
+        <Route path="/listBank">
+          <ListBank />
+        </Route>
+      </Switch>
     </Router>
   );
 }

@@ -1,0 +1,17 @@
+
+.offers{
+  list-style-type: none;
+}
+
+.offer{
+  border: 2px #E3B15A solid;
+}
+
+.numBank{
+  background-color: #1E2044;
+  color: white;
+  min-width: 76px;
+  text-align: center;
+}
+
+

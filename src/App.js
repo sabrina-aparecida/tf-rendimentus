@@ -2,8 +2,11 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
+
   Route,
   Redirect,
+} from "react-router-dom";
+  Route
 } from "react-router-dom";
 
 import * as firebase from 'firebase';
@@ -23,7 +26,6 @@ const firebaseConfig = {
   appId: "1:551754704215:web:526701dc6fc91a8fa08a12"
 };
 const appFirebase = firebase.initializeApp(firebaseConfig);
-
 
 
 function App() {

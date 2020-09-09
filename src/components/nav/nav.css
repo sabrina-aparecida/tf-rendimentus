@@ -1,0 +1,49 @@
+.menu-hamburger{
+  max-width: 41px;
+  width: 100vw;
+  height: 5vh;
+  margin-top: 6px;
+  border: none;
+  outline: none;
+}
+.btn-pages{
+  width: 4vw;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1E2044;
+  border: none;
+}
+.pages{
+  width: 30vw;
+  height: 5vh;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  position: relative;
+}
+.logo-nav{
+  width: 69px;
+  height: 22px;
+  display: flex;
+  margin-left: 223px;
+}
+.listener{
+  width: 4vw;
+  height: 6vh;
+  display: flex;
+  flex-direction: column;
+}
+.menu-burger{
+  position: fixed;
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #1E2044;
+}

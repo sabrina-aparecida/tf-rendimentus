@@ -4,6 +4,7 @@ import logo from '../../assets/logo.png';
 import menu from '../../assets/menuhamburger.png';
 import { Link } from 'react-router-dom';
 import 'firebase/firebase-auth';
+import './nav.css'
 
 
 const Nav = () => {
@@ -25,8 +26,8 @@ const Nav = () => {
             <Link to="/listBank">
               <button type="submit" className="pages">Contratos</button>
             </Link>
-            <Link to="/">
-              <button type="submit" id="exit" className="btn-exit" onClick={() => firebase.auth().signOut()}>Sair</button>
+            <Link to="/login">
+              <button type="submit" className="pages">Sair</button>
             </Link>
             </div>
         )}

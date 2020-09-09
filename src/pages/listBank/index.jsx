@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ItemBank from '../../components/itemBank'
 import './style.css'
-import api from "../../service/api";
+
 
 
 function ListBank() {

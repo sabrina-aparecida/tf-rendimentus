@@ -6,11 +6,9 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-  Route
-} from "react-router-dom";
+
 
 import * as firebase from 'firebase';
-import './App.css';
 import Login from './pages/login';
 import Home from './pages/home';
 import Services from './pages/services';

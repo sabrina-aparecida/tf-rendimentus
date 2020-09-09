@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ItemBank from '../../components/itemBank'
+import './style.css'
 
 function ListBank() {
   const [banks, setBanks] = useState([{
@@ -14,7 +15,7 @@ function ListBank() {
       <ul>
         {banks.map(item => (<ItemBank numBank={item.num} nameBank={item.name} saldoAcount={item.saldo} />))}
       </ul>
-      <span>SALDO DISPONÍVEL DE TODAS AS CONTAS:   R$   R$: 5.000,00</span>
+      <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:   R$   R$: 5.000,00</span>
 
     </>
   )

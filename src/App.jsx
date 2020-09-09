@@ -3,13 +3,11 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
 } from "react-router-dom";
 
 
 import * as firebase from 'firebase';
 import Login from './pages/login';
-import Home from './pages/home';
 import Services from './pages/services';
 import ListBank from './pages/listBank';
 
@@ -32,9 +30,6 @@ function App() {
       <Switch>
         <Route path="/" exact={true}>
           <Login />
-        </Route>
-        <Route path="/home">
-          <Home />
         </Route>
         <Route path="/services">
           <Services />

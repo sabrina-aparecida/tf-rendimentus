@@ -1,9 +1,11 @@
 import React from 'react';
+import './style.css'
+
 
 const ItemBank = ({ numBank, nameBank, saldoAcount }) => (
-  <li>
+  <li className="bank">
     <span>{numBank}</span>
-    <div>
+    <div className="info-bank">
       <span>{nameBank}</span>
       <span>Saldo disponivél: {saldoAcount}</span>
     </div>

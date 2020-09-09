@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 import ItemBank from '../../components/itemBank'
+import './style.css'
 
-function listBank() {
+function ListBank() {
+  const [banks, setBanks] = useState([{
+    num: "422",
+    name: "Banco Safra S.A",
+    saldo: 1000
+  }])
 
   return (
     <>
       <h1>header</h1>
       <ul>
-        <ItemBank numBank="341" nameBank="Banco Itau Unibanco S.A." saldoAcount="1000" />
-        <ItemBank numBank="341" nameBank="Banco Itau Unibanco S.A." saldoAcount="1000" />
-        <ItemBank numBank="341" nameBank="Banco Itau Unibanco S.A." saldoAcount="1000" />
-        <ItemBank numBank="341" nameBank="Banco Itau Unibanco S.A." saldoAcount="1000" />
+        {banks.map(item => (<ItemBank numBank={item.num} nameBank={item.name} saldoAcount={item.saldo} />))}
       </ul>
-      <span>SALDO DISPONÍVEL DE TODAS AS CONTAS:   R$   R$: 5.000,00</span>
+      <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:   R$   R$: 5.000,00</span>
 
     </>
   )
 }
-export default listBank;
+export default ListBank;

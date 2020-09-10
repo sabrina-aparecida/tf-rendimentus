@@ -11,3 +11,14 @@ color:#FFFFFF;
 .list-card-bank{
     margin-top: 114px;
 }
+.message{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 350px;
+    height: 90px;
+    font-family: 'Roboto Slab', serif;
+    background-color: #de3163;
+    margin: auto;
+    }

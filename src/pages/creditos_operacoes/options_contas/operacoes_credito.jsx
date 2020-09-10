@@ -4,9 +4,6 @@ import Taxas from './taxas';
 import Publico from './publico';
 import Garantias from './garantias'
 
-
-
-
 const  Operacoes_credito = () => {
     const [showResultsTarifa, setShowResultsTarifa] = useState(false);
     const [showResultsTaxas, setShowResultsTaxas] = useState(false);
@@ -42,27 +39,23 @@ const  Operacoes_credito = () => {
            }
      }
      return (
-        <>
-            <div className = "insfos-banco">
-                <h2> Operações de Crédito </h2>
-            </div>              
-
+        <>            
             <main> 
                 <div className = "menu-options">
                 <div className = "opcoes_division">
-                    <button className= "button_creditos" onClick={onClickTarifa} >TIPOS DE CONTA </button>
+                    <button className= "button_creditos" onClick={onClickPublico} >PÚBLICO </button>
+                    { showResultsPublico ? <Publico/> : null }                 
+                </div>
+                <div className = "opcoes_division">
+                    <button className= "button_creditos" onClick={onClickTarifa} >TARIFAS </button>
                     { showResultsTarifa ? <Tarifa/> : null }
                 </div>
                 <div className = "opcoes_division">
-                <button className= "button_creditos" onClick={onClickTaxas} >TARIFAS </button>
+                <button className= "button_creditos" onClick={onClickTaxas} >TAXAS </button>
                     { showResultsTaxas ? <Taxas/> : null }
                  </div>
                  <div className = "opcoes_division">
-                    <button className= "button_creditos" onClick={onClickPublico} >PACOTES </button>
-                    { showResultsPublico ? <Publico/> : null }                 
-                </div>
-                 <div className = "opcoes_division">
-                  <button className= "button_creditos" onClick={onClickGarantias} >MOVIMENTAÇÃO </button>
+                  <button className= "button_creditos" onClick={onClickGarantias} >GARANTIAS</button>
                     { showResultsGarantias ? <Garantias/> : null }
                  </div>
                 </div>

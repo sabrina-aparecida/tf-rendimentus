@@ -12,10 +12,12 @@ const Header = () => {
         return response.json();
       })
       .then((data) => {
+        console.log(data)
         setProfile(data);
 
       })
       .catch((e) => {
+        console.log(e)
         alert("ocorreu um erro ao tentar obter os dados");
       });
   }, []);
@@ -23,10 +25,10 @@ const Header = () => {
   return (
     <div className="container-inner">
       <div className="profile-photo">
-      <Image src={Usuario} alt="profile" className="profile-user" />
+        <Image src={Usuario} alt="profile" className="profile-user" />
       </div>
-      {profile.map(item => (
-        <div className="header-profile">
+      {profile.map((item, index) => (
+        <div className="header-profile" key={index}>
           <span>
             Cliente:
           {item.name}
@@ -37,7 +39,7 @@ const Header = () => {
           </span>
         </div>
       )
-      )};
+      )}
     </div>
   )
 }

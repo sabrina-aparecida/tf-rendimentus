@@ -4,21 +4,11 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import * as firebase from 'firebase';
 import Login from './pages/login/login';
 import ListBank from './pages/listBank/listBank';
 import Offers from './pages/offers';
-
-const firebaseConfig = {
-  apiKey: "AIzaSyAka5GTL8jbx5CGnHndNX_flBeNqeXMNvw",
-  authDomain: "tf-rendimentus.firebaseapp.com",
-  databaseURL: "https://tf-rendimentus.firebaseio.com",
-  projectId: "tf-rendimentus",
-  storageBucket: "tf-rendimentus.appspot.com",
-  messagingSenderId: "551754704215",
-  appId: "1:551754704215:web:526701dc6fc91a8fa08a12"
-};
-const appFirebase = firebase.initializeApp(firebaseConfig);
+import MenuBank from './pages/menuBank/menuBank';
+import Extract from './pages/extrato/extrato';
 
 
 function App() {
@@ -34,6 +24,12 @@ function App() {
         </Route>
         <Route path="/listBank">
           <ListBank />
+        </Route>
+        <Route path="/menuBank/:id">
+          <MenuBank />
+        </Route>
+        <Route path="/extract/:id">
+          <Extract />
         </Route>
       </Switch>
     </Router>

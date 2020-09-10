@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card_product from '../../components/card_product'
-
+import Header from '../../components/header/Header'
 
 function Offers() {
   const [offers, setOffers] = useState([])
@@ -47,7 +47,9 @@ function Offers() {
   return (
 
     <>
-      <h1>header</h1>
+<div>
+  <Header></Header>
+</div>
 <h2>Escolha a opção que mais se adequa a você:</h2>
       <div>
         <p>Ordenar por:</p>

@@ -24,7 +24,6 @@ function ListBank() {
           item.valueExtract = item.accounts[0].accountExtract.reduce((prev, next) => prev + next.value, 0).toFixed(2)
           return item;
         })
-        console.log(data)
         const balance = data.reduce((prev, next) => prev + next.accounts[0].balance, 0).toFixed(2)
         setBanks(data);
         setBalanceAccounts(balance);
@@ -37,7 +36,7 @@ function ListBank() {
 
   function handleDetail(id) {
     console.log(id);
-    history.push(`/login/${id}`);
+    history.push(`/menuBank/${id}`);
   }
 
   return (

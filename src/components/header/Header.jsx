@@ -17,6 +17,7 @@ const Header = () => {
 
       })
       .catch((e) => {
+        console.log(e)
         alert("ocorreu um erro ao tentar obter os dados");
       });
   }, []);
@@ -26,8 +27,8 @@ const Header = () => {
       <div className="profile-photo">
         <Image src={Usuario} alt="profile" className="profile-user" />
       </div>
-      {profile.map(item => (
-        <div className="header-profile">
+      {profile.map((item, index) => (
+        <div className="header-profile" key={index}>
           <span>
             Cliente:
           {item.name}
@@ -38,7 +39,7 @@ const Header = () => {
           </span>
         </div>
       )
-      )};
+      )}
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import ItemBank from '../../components/itemBank/itemBank'
 import Nav from '../../components/nav/Nav';
-import Header from '../../components/header/Header'
+import Header from '../../components/header/Header' 
 
 import './style.css'
 

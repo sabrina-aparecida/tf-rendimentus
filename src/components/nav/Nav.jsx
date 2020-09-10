@@ -20,20 +20,23 @@ const Nav = () => {
         {open && (
           <div>
             <Link to="/listBank">
+              <button type="submit" className="pages">Home</button>
+            </Link>
+            <Link to="/offers">
               <button type="submit" className="pages">Créditos</button>
             </Link>
-            <Link to="/listBank">
+            <Link to="/offers">
               <button type="submit" className="pages">Contratos</button>
             </Link>
             <Link to="/login">
               <button type="submit" className="pages">Sair</button>
             </Link>
-            </div>
+          </div>
         )}
-        </div>
-        <div>
-          <Image src={logo} alt="logo-nav" class="logo-nav" />
-        </div>
+      </div>
+      <div>
+        <Image src={logo} alt="logo-nav" class="logo-nav" />
+      </div>
     </nav>
   );
 };

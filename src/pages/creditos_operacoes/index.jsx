@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './style.css'
 import CreditOperation from './options_contas/operacoes_credito';
 import CountOperation from './options_components/operacoes_contas';
 
@@ -27,14 +28,19 @@ const  BankOptions = () => {
     }
 
      return (
-        <main>
-            <button className= "count_operation" onClick={onClickCount} >Contas e Operações</button>
+         <>
+        <header> 
+            <h1>header</h1>
+        </header>
+        <div className = "buttons_order">
+            <button className= "button_show_creditos" onClick={onClickCount} >Contas e Operações</button>
                     { showResultsCount ?  <CountOperation/> : null }
 
-                    <button className= "count_operation" onClick={onClickCredit} > Operações de Crétido </button>
+                    <button className= "button_show_creditos" onClick={onClickCredit} > Operações de Crétido </button>
                     { showResultsCredit ?  <CreditOperation/> : null }
          
-        </main>
+        </div>
+        </>
     )
 }
 export default BankOptions;          

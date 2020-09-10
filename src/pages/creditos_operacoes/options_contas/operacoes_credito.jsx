@@ -58,6 +58,8 @@ const  Operacoes_credito = () => {
                   <button className= "button_creditos" onClick={onClickGarantias} >GARANTIAS</button>
                     { showResultsGarantias ? <Garantias/> : null }
                  </div>
+                 <button className= "button_send" > ENVIAR SOLICITAÇÃO </button>
+
                 </div>
             </main>
         </>

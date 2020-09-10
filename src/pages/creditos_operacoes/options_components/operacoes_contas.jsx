@@ -52,9 +52,6 @@ const  Contas_operacoes = () => {
      }
      return (
         <>
-            <header> 
-                <h1>header</h1>
-            </header>
             <main> 
                 <div className = "menu-options">
                 <div className = "opcoes_division">
@@ -78,6 +75,7 @@ const  Contas_operacoes = () => {
                     <button className= "button_creditos" onClick={onClickPublico} >PÚBLICO </button>
                     { showResultsPublicas ? <OpcoesPublicas/> : null }
                 </div>
+                <button className= "button_send"  >ENVIAR SOCICITAÇÃO </button>
                 </div>
             </main>
         </>

@@ -23,15 +23,6 @@ const Card_product = ({ numBank, nameBank, rate, value, maxInstallments }) => (
     </table>
   </li>
 
-//   return (
-//     <div className="cardProducts">
-//     <p> Banco </p>
-//     <p> Taxa de juros: </p>
-//     <p> Crédito pré aprovado: </p> 
-//     <p> Número de Parcelas: </p>
-
-// </div>
-//   )
 )
 
 export default Card_product;

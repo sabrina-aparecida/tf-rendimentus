@@ -38,7 +38,6 @@ const  BankOptions = () => {
 
                     <button className= "button_show_creditos" onClick={onClickCredit} > Operações de Crétido </button>
                     { showResultsCredit ?  <CreditOperation/> : null }
-         
         </div>
         </>
     )

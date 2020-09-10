@@ -31,7 +31,7 @@ const Nav = () => {
             </div>
         )}
         </div>
-        <div>
+        <div className="listener2">
           <Image src={logo} alt="logo-nav" class="logo-nav" />
         </div>
     </nav>

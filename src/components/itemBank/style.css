@@ -1,5 +1,7 @@
-
-
+* {
+  margin: 0;
+  padding: 0;
+}
 .bank{
   display: flex;
   align-items: center;
@@ -9,9 +11,8 @@
   width: 350px;
   height: 150px;
   border: solid 3px #e3b15d;
-  font-family: 'Roboto Slab', serif;
+  font-family: Montserrat;
 }
-
 .info-bank{
   display: flex;
   flex-direction: column;

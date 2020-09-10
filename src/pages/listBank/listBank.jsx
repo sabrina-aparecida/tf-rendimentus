@@ -35,7 +35,7 @@ function ListBank() {
 
   function handleDetail(id) {
     console.log(id);
-    history.push(`/login/${id}`);
+    history.push(`/menuBank/${id}`);
   }
 
   return (

@@ -36,7 +36,7 @@ function App() {
         <Route path="/listBank">
           <ListBank />
         </Route>
-        <Route path="/menuBank">
+        <Route path="/menuBank/:id">
           <MenuBank />
         </Route>
       </Switch>

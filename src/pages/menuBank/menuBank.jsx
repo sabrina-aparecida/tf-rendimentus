@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
+
 import Nav from '../../components/nav/Nav';
 import Header from '../../components/header/Header'
 import Button from '../../components/button/Button'
+import extrato from '../../assets/extrato.png'
+import credito from '../../assets/credito.png'
+import cartoes from '../../assets/cartao-de-pagamento.png'
+import dinheiro from '../../assets/dinheiro.png'
 
 function MenuBank() {
-	const [sac, setSac] = useState([])
 	const history = useHistory();
+	let { id } = useParams();
+	const [sac, setSac] = useState();
 
 	useEffect(() => {
-		fetch('https://jsonbox.io/box_ddb0ab5da8d69da8c315/banks')
+		fetch(`https://jsonbox.io/box_ddb0ab5da8d69da8c315/banks/${id}`)
 			.then((response) => {
 				return response.json();
 			})
@@ -19,12 +25,15 @@ function MenuBank() {
 			.catch((e) => {
 				alert("ocorreu um erro ao tentar obter os dados");
 			});
-	}, []);
+	}, [id]);
 
 	function handleMenuBank() {
-    history.push(`/login/`);
-  }
+		history.push(`/login/`);
+	}
 
+	if (!sac) {
+		return null;
+	}
 	return (
 		<>
 			<div className="nav">
@@ -33,9 +42,11 @@ function MenuBank() {
 				</header>
 			</div>
 			<Header />
+			<span>Agencia: {sac.accounts[0].accountNumber}  Conta:{sac.accounts[0].agency}  </span>
 			<section>
 				<div>
 					<Button
+						icon={extrato}
 						name="EXTRATO"
 						item="Por período"
 						className="submit"
@@ -44,6 +55,7 @@ function MenuBank() {
 				</div>
 				<div>
 					<Button
+						icon={credito}
 						name="CRÉDITOS"
 						item="Contratos"
 						className="submit"
@@ -52,6 +64,7 @@ function MenuBank() {
 				</div>
 				<div>
 					<Button
+						icon={cartoes}
 						name="CARTÕES"
 						item="Fatura"
 						className="submit"
@@ -60,6 +73,7 @@ function MenuBank() {
 				</div>
 				<div>
 					<Button
+						icon={dinheiro}
 						name="CONTRATAÇÕES"
 						item="Consultar"
 						className="submit"
@@ -68,6 +82,7 @@ function MenuBank() {
 				</div>
 				<div>
 					<Button
+						icon={cartoes}
 						name="OUTROS CARTÕES"
 						item="Bandeiras"
 						className="submit"
@@ -77,15 +92,11 @@ function MenuBank() {
 			</section>
 			<footer>
 				<span> CANAIS DE ATENDIMENTO:</span>
-				{sac.map(item => (
-					<span>
-						{item.callCenter}
-{/* 						<div>
-							{item.accounts[0].credito}
-						
-						</div> */}
-					</span>
-				))}
+				<span>Contato do Gerente:</span>
+				<span>{sac.callCenter}</span>
+				<span>{sac.accounts[0].accountManager.name}</span>
+				<span>{sac.accounts[0].accountManager.email}</span>
+				<span>{sac.accounts[0].accountManager.telefone}</span>
 			</footer>
 		</>
 	)

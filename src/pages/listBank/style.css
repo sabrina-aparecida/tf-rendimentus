@@ -4,3 +4,15 @@ color:#FFFFFF;
 padding:30px;
 margin-top:250px;
 }
+
+.message{
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+justify-content: space-around;
+width: 350px;
+height: 90px;
+font-family: 'Roboto Slab', serif;
+background-color: #de3163;
+margin: auto;
+}

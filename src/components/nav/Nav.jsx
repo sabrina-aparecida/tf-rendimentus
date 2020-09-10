@@ -3,7 +3,7 @@ import Image from '../image/image';
 import logo from '../../assets/logo.png';
 import menu from '../../assets/menuhamburger.png';
 import { Link } from 'react-router-dom';
-import 'firebase/firebase-auth';
+import './nav.css'
 
 
 const Nav = () => {
@@ -20,20 +20,23 @@ const Nav = () => {
         {open && (
           <div>
             <Link to="/listBank">
+              <button type="submit" className="pages">Home</button>
+            </Link>
+            <Link to="/offers">
               <button type="submit" className="pages">Créditos</button>
             </Link>
-            <Link to="/listBank">
+            <Link to="/offers">
               <button type="submit" className="pages">Contratos</button>
             </Link>
-            <Link to="/">
-              <button type="submit" id="exit" className="btn-exit" onClick={() => firebase.auth().signOut()}>Sair</button>
+            <Link to="/login">
+              <button type="submit" className="pages">Sair</button>
             </Link>
-            </div>
+          </div>
         )}
-        </div>
-        <div>
-          <Image src={logo} alt="logo-nav" class="logo-nav" />
-        </div>
+      </div>
+      <div>
+        <Image src={logo} alt="logo-nav" class="logo-nav" />
+      </div>
     </nav>
   );
 };

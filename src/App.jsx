@@ -8,6 +8,7 @@ import * as firebase from 'firebase';
 import Login from './pages/login/login';
 import ListBank from './pages/listBank/listBank';
 import Offers from './pages/offers';
+import MenuBank from './pages/menuBank/menuBank';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAka5GTL8jbx5CGnHndNX_flBeNqeXMNvw",
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path="/listBank">
           <ListBank />
+        </Route>
+        <Route path="/menuBank">
+          <MenuBank />
         </Route>
       </Switch>
     </Router>

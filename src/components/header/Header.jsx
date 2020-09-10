@@ -12,13 +12,14 @@ const Header = () => {
         return response.json();
       })
       .then((data) => {
+        console.log(data)
         setProfile(data);
 
       })
       .catch((e) => {
         alert("ocorreu um erro ao tentar obter os dados");
       });
-  }, []);
+  }, [profile]);
 
   return (
     <div className="container-inner">

@@ -47,6 +47,7 @@ function MenuBank() {
 						name="CRÉDITOS"
 						item="Contratos"
 						className="submit"
+						onClick={handleMenuBank}
 					/>
 				</div>
 				<div>
@@ -54,6 +55,7 @@ function MenuBank() {
 						name="CARTÕES"
 						item="Fatura"
 						className="submit"
+						onClick={handleMenuBank}
 					/>
 				</div>
 				<div>
@@ -61,6 +63,7 @@ function MenuBank() {
 						name="CONTRATAÇÕES"
 						item="Consultar"
 						className="submit"
+						onClick={handleMenuBank}
 					/>
 				</div>
 				<div>
@@ -68,6 +71,7 @@ function MenuBank() {
 						name="OUTROS CARTÕES"
 						item="Bandeiras"
 						className="submit"
+						onClick={handleMenuBank}
 					/>
 				</div>
 			</section>

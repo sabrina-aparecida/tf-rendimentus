@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 
 function OfferMessage() {
-  const [offers, setOffers] = useState([])
+  const [sum, setSum] = useState([])
 
   useEffect(() => {
     fetch('https://jsonbox.io/box_ddb0ab5da8d69da8c315/banks')
@@ -28,23 +28,33 @@ function OfferMessage() {
                 .reduce((accumulator, currentValue) => (accumulator + currentValue), 0)
             }
         })
-        console.log(sum)
         // Soma de todos os saldos e faturas de todos os bancos
         .reduce((accumulator, currentValue) => ({
             totalBalance: accumulator.totalBalance + currentValue.sumBalance,
             totalExtract: accumulator.totalExtract + currentValue.sumExtract,
-        }), { totalBalance: 0, totalBalance: 0 })
-        console.log("total" , sum)
+        }), { totalBalance: 0, totalExtract: 0 })
+        setSum(sum)
       })
       .catch((e) => {
+          console.log(e)
         alert("ocorreu um erro ao tentar obter os dados");
       });
-  }, [offers]);
+  }, []);
 
   return (
+      <div>
+    {
+    ((sum.totalExtract / sum.totalBalance * 100) >= 70)?
 
     <div>
-   
+Seu saldo atual é de R${sum.totalBalance}
+Consulte aqui nossos planos de créditos para facilitar sua vida e você não ficar sem dinheiro!
+    </div>
+
+    :""
+
+    }
+
     </div>
 
   )

@@ -52,6 +52,9 @@ function ListBank() {
       </div>
       <Header />
       <div>
+        <div className="message">
+          <OfferMessage />
+          </div>
         <ul>
           {banks.map(item => (
             <ItemBank
@@ -66,7 +69,6 @@ function ListBank() {
         </ul>
         <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:  {numberFormat.format(balanceAccounts)} </span>
       </div>
-      <OfferMessage />
     </>
   )
 }

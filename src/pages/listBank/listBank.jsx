@@ -49,13 +49,9 @@ function ListBank() {
             valueCredit={item.accounts[0].credit}
           />))}
       </ul>
-<<<<<<< HEAD:src/pages/listBank/listBank.jsx
-      <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:   R$: 5.000,00</span>
-    </div>
-=======
       <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:  {balanceAccounts} </span>
->>>>>>> ef1afe113548958a67d1cb0b49a2f73325aaecef:src/pages/listBank/index.jsx
+    </div>
     </>
-  )
+    )
 }
 export default ListBank; 

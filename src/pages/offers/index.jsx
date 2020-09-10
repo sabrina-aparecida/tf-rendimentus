@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ItemBank from '../../components/itemBank'
 import Card_product from '../../components/card_product'
 
 

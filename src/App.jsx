@@ -29,9 +29,6 @@ function App() {
         <Route path="/" exact={true}>
           <Login />
         </Route>
-        <Route path="/home">
-          <Home />
-        </Route>
         <Route path="/offers">
           <Offers />
         </Route>

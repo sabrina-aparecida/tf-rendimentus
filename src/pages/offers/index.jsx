@@ -48,7 +48,7 @@ function Offers() {
 
     <>
 
-      <h1>< rotasTheader /></h1>
+      <h1><rotasTheader /></h1>
       <h2>Escolha a opção que mais se adequa a você:</h2>
 
       <div>

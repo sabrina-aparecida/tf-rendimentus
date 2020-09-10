@@ -16,18 +16,18 @@
   border: none;
 }
 .pages{
-  width: 30vw;
-  height: 5vh;
+  width: 38vw;
+  height: 8vh;
   margin-top: 0px;
   margin-bottom: 0px;
   border-radius: 0px;
   position: relative;
+  font-family: Montserrat;
+  font-weight: bolder
 }
 .logo-nav{
-  width: 69px;
-  height: 22px;
+  width: 36%;
   display: flex;
-  margin-left: 223px;
 }
 .listener{
   width: 4vw;
@@ -35,15 +35,17 @@
   display: flex;
   flex-direction: column;
 }
+.listener2{
+  display: flex;
+  justify-content: flex-end;
+}
 .menu-burger{
   position: fixed;
-  width: 100vw;
-  height: 5vh;
-  display: flex;
+  top: 0px;
   justify-content: space-around;
+  width: 100vw;
+  display: flex;
   align-items: center;
-  top: 0;
-  left: 0;
-  right: 0;
   background: #1E2044;
+
 }

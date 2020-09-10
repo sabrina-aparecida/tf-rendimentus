@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Usuario from '../../assets/usuario.png';
-import Image from '../../components/image/image';
+import Image from '../image/image';
+import './style.css'
 
 
 const Header = () => {
@@ -25,16 +26,15 @@ const Header = () => {
   return (
     <div className="container-inner">
       <div className="profile-photo">
-        <Image src={Usuario} alt="profile" className="profile-user" />
+        <Image src={Usuario} alt="profile" class="profile-user" />
       </div>
       {profile.map((item, index) => (
         <div className="header-profile" key={index}>
-          <span>
-            Cliente:
+          <span className="bold">
+            Olá,
           {item.name}
           </span>
           <span>
-            CPF/CPNJ:
           {item.cpf}
           </span>
         </div>

@@ -1,18 +1,38 @@
-
-
+* {
+  margin: 0;
+  padding: 0;
+}
 .bank{
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: space-around;
   border-radius: 5px;
-  width: 350px;
+  width: 280px;
   height: 150px;
-  border: solid 3px #e3b15d;
-  font-family: 'Roboto Slab', serif;
+  font-family: Montserrat;
+  font-size: 13px;
+  margin: auto;
+  overflow: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  box-shadow: 1px 3px 5px black;
+  background: rgba(202, 194, 177, 0.329);
 }
-
 .info-bank{
   display: flex;
   flex-direction: column;
 }
+.namebankintro{
+  font-weight: bold;
+}
+/* .balancesaldo{
+
+
+}
+.extratcvalue{
+
+}
+.cardcreditvalue{
+ 
+}
+ */

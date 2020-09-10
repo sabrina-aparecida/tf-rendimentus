@@ -5,7 +5,6 @@ import Nav from '../../components/nav/Nav';
 import Header from '../../components/header/Header'
 import Button from '../../components/button/Button'
 import extrato from '../../assets/extrato.png'
-import credito from '../../assets/credito.png'
 import cartoes from '../../assets/cartao-de-pagamento.png'
 import dinheiro from '../../assets/dinheiro.png'
 
@@ -47,15 +46,6 @@ function MenuBank() {
 				<div>
 					<Button
 						icon={extrato}
-						name="EXTRATO"
-						item="Por período"
-						className="submit"
-						onClick={handleMenuBank}
-					/>
-				</div>
-				<div>
-					<Button
-						icon={credito}
 						name="CRÉDITOS"
 						item="Contratos"
 						className="submit"

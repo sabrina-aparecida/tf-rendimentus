@@ -3,7 +3,11 @@ import { useHistory } from "react-router-dom";
 import ItemBank from '../../components/itemBank/itemBank'
 import Nav from '../../components/nav/Nav';
 import Header from '../../components/header/Header'
+
+import { numberFormat, dateTimeFormat } from "../../Util/util";
+
 import OfferMessage from '../../components/offer_message'
+
 
 
 import './style.css'
@@ -21,7 +25,7 @@ function ListBank() {
       })
       .then((data) => {
         data.map(item => {
-          item.valueExtract = item.accounts[0].accountExtract.reduce((prev, next) => prev + next.value, 0).toFixed(2)
+          item.valueCredit = item.accounts[0].accountExtract.reduce((prev, next) => prev + next.value, 0).toFixed(2)
           return item;
         })
         const balance = data.reduce((prev, next) => prev + next.accounts[0].balance, 0).toFixed(2)
@@ -53,15 +57,14 @@ function ListBank() {
             <ItemBank
               numBank={item.bankNumber}
               nameBank={item.name}
-              balanceAccount={item.accounts[0].balance}
-              valueExtract={item.valueExtract}
+              balanceAccount={numberFormat.format(item.accounts[0].balance)}
               accountNumber={item.accounts[0].accountNumber}
               agencyNumber={item.accounts[0].agency}
-              valueCredit={item.accounts[0].credit}
+              valueCredit={numberFormat.format(item.valueCredit)}
               onClick={() => handleDetail(item._id)}
             />))}
         </ul>
-        <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:  {balanceAccounts} </span>
+        <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:  {numberFormat.format(balanceAccounts)} </span>
       </div>
       <OfferMessage />
     </>

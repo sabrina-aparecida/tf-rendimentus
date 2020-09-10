@@ -3,9 +3,9 @@ import './style.css'
 
 
 
-const Card_product = ({ numBank, nameBank, rate, value, maxInstallments }) => (
-  
-  <li className="offer">
+const Card_product = ({ numBank, nameBank, rate, value, maxInstallments, onClick }) => (
+
+  <li className="offer" onclick={onClick}>
     <table>
       <tr >
         <td className="numBank" rowspan="4">{numBank}</td>

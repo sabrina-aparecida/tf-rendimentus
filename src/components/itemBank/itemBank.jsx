@@ -11,7 +11,7 @@ const ItemBank = ({ numBank, nameBank, balanceAccount, valueExtract, accountNumb
       <span>Extrato: {valueExtract}</span>
       <span>Conta: {accountNumber}</span>
       <span>Agência: {agencyNumber}</span>
-      <span>Cartão Crédito: {valueCredit}</span>
+      <span>Cartão Crédito: {valueCredit.cardNumber}</span>
     </div>
   </li>
 )

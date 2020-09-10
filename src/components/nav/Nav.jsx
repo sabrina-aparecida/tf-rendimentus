@@ -3,7 +3,6 @@ import Image from '../image/image';
 import logo from '../../assets/logo.png';
 import menu from '../../assets/menuhamburger.png';
 import { Link } from 'react-router-dom';
-import 'firebase/firebase-auth';
 import './nav.css'
 
 

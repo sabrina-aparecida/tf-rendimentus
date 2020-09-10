@@ -8,8 +8,8 @@ import {
 
 import * as firebase from 'firebase';
 import Login from './pages/login';
-import Services from './pages/services';
 import ListBank from './pages/listBank';
+import ContasOptions from './pages/creditos_operacoes'
 
 const firebaseConfig = {
   apiKey: "AIzaSyAka5GTL8jbx5CGnHndNX_flBeNqeXMNvw",
@@ -31,11 +31,11 @@ function App() {
         <Route path="/" exact={true}>
           <Login />
         </Route>
-        <Route path="/services">
-          <Services />
-        </Route>
         <Route path="/listBank">
           <ListBank />
+        </Route>
+        <Route path="/Contas_Options">
+          <ContasOptions />
         </Route>
       </Switch>
     </Router>

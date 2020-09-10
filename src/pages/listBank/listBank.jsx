@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 import ItemBank from '../../components/itemBank/itemBank'
 import Nav from '../../components/nav/Nav';
 import Header from '../../components/header/Header'
+
 import './style.css'
 
 
 function ListBank() {
+  const history = useHistory();
   const [banks, setBanks] = useState([])
   const [balanceAccounts, setBalanceAccounts] = useState("50")
 
@@ -30,30 +33,36 @@ function ListBank() {
       });
   }, []);
 
+  function handleDetail(id) {
+    console.log(id);
+    history.push(`/login/${id}`);
+  }
+
   return (
     <>
-    <div className="nav">
-      <header className="hal">
-        <Nav link='/listBank'></Nav>
-      </header>
-    </div>
-    <Header />
-    <div>
-      <ul>
-        {banks.map(item => (
-          <ItemBank 
-            numBank={item.bankNumber}
-            nameBank={item.name}
-            balanceAccount={item.accounts[0].balance}
-            valueExtract={item.valueExtract}
-            accountNumber={item.accounts[0].accountNumber}
-            agencyNumber={item.accounts[0].agency}
-            valueCredit={item.accounts[0].credit}
-          />))}
-      </ul>
-      <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:  {balanceAccounts} </span>
-    </div>
+      <div className="nav">
+        <header className="hal">
+          <Nav link='/listBank'></Nav>
+        </header>
+      </div>
+      <Header />
+      <div>
+        <ul>
+          {banks.map(item => (
+            <ItemBank
+              numBank={item.bankNumber}
+              nameBank={item.name}
+              balanceAccount={item.accounts[0].balance}
+              valueExtract={item.valueExtract}
+              accountNumber={item.accounts[0].accountNumber}
+              agencyNumber={item.accounts[0].agency}
+              valueCredit={item.accounts[0].credit}
+              onClick={() => handleDetail(item._id)}
+            />))}
+        </ul>
+        <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:  {balanceAccounts} </span>
+      </div>
     </>
-    )
+  )
 }
 export default ListBank; 

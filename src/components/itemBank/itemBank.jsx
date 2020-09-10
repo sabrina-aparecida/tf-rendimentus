@@ -2,8 +2,8 @@ import React from 'react';
 import './style.css'
 
 
-const ItemBank = ({ numBank, nameBank, balanceAccount, valueExtract, accountNumber, agencyNumber, valueCredit }) => (
-  <li className="bank">
+const ItemBank = ({ numBank, nameBank, balanceAccount, valueExtract, accountNumber, agencyNumber, valueCredit, onClick }) => (
+  <li className="bank" onClick={onClick}>
     <span>{numBank}</span>
     <div className="info-bank">
       <span>{nameBank}</span>

@@ -5,6 +5,7 @@ import './style.css'
 
 function ListBank() {
   const [banks, setBanks] = useState([])
+  const [balanceAccounts, setBalanceAccounts] = useState("50")
 
   useEffect(() => {
     fetch('https://jsonbox.io/box_ddb0ab5da8d69da8c315/banks')
@@ -12,7 +13,13 @@ function ListBank() {
         return response.json();
       })
       .then((data) => {
+        data.map(item => {
+          item.valueExtract = item.accounts[0].accountExtract.reduce((prev, next) => prev + next.value, 0).toFixed(2)
+          return item;
+        })
+        const balance = data.reduce((prev, next) => prev + next.accounts[0].balance, 0).toFixed(2)
         setBanks(data);
+        setBalanceAccounts(balance);
 
       })
       .catch((e) => {
@@ -26,10 +33,17 @@ function ListBank() {
     <>
       <h1>header</h1>
       <ul>
-        {banks.map(item => (<ItemBank numBank={item.bankNumber} nameBank={item.name} saldoAcount={item.saldo} />))}
+        {banks.map(item => (
+          <ItemBank numBank={item.bankNumber}
+            nameBank={item.name}
+            balanceAccount={item.accounts[0].balance}
+            valueExtract={item.valueExtract}
+            accountNumber={item.accounts[0].accountNumber}
+            agencyNumber={item.accounts[0].agency}
+            valueCredit={item.accounts[0].credit}
+          />))}
       </ul>
-      <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:   R$: 5.000,00</span>
-
+      <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:  {balanceAccounts} </span>
     </>
   )
 }

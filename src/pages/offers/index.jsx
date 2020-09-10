@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card_product from '../../components/card_product'
-
+import Header from '../../components/header/Header'
 
 function Offers() {
   const [offers, setOffers] = useState([])
@@ -47,8 +47,10 @@ function Offers() {
   return (
 
     <>
-      <h1>header</h1>
+
+      <h1><< rotasTheader</h1>
       <h2>Escolha a opção que mais se adequa a você:</h2>
+
       <div>
         <p>Ordenar por:</p>
         <select name="" id="" onChange={e => setOrderby(e.target.value)}>

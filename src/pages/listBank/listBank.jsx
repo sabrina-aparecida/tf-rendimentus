@@ -3,7 +3,12 @@ import { useHistory } from "react-router-dom";
 import ItemBank from '../../components/itemBank/itemBank'
 import Nav from '../../components/nav/Nav';
 import Header from '../../components/header/Header'
+
 import { numberFormat, dateTimeFormat } from "../../Util/util";
+
+import OfferMessage from '../../components/offer_message'
+
+
 
 import './style.css'
 
@@ -61,6 +66,7 @@ function ListBank() {
         </ul>
         <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:  {numberFormat.format(balanceAccounts)} </span>
       </div>
+      <OfferMessage />
     </>
   )
 }

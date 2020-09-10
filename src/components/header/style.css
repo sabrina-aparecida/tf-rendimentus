@@ -3,6 +3,8 @@
   padding: 0;
 }
 .container-inner{
+  position: fixed;
+    top: 33px;
   width: 100vw;
   height: 11vh;
   display: flex;

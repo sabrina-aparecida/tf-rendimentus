@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import ItemBank from '../../components/itemBank/itemBank'
 import Nav from '../../components/nav/Nav';
-import Header from '../../components/header/Header' 
+import Header from '../../components/header/Header'
 
 import './style.css'
 
@@ -45,7 +45,7 @@ function ListBank() {
         </header>
       </div>
       <Header />
-      <div>
+      <div className="list-card-bank">
         <ul>
           {banks.map(item => (
             <ItemBank
@@ -59,7 +59,9 @@ function ListBank() {
               onClick={() => handleDetail(item._id)}
             />))}
         </ul>
-        <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:  {balanceAccounts} </span>
+        <div className="totalcreditc">
+          <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:  {balanceAccounts} </span>
+        </div>
       </div>
     </>
   )

@@ -6,12 +6,12 @@ const ItemBank = ({ numBank, nameBank, balanceAccount, valueExtract, accountNumb
   <li className="bank" onClick={onClick}>
     <span>{numBank}</span>
     <div className="info-bank">
-      <span>{nameBank}</span>
-      <span>Saldo disponivél: {balanceAccount}</span>
-      <span>Extrato: {valueExtract}</span>
+      <span className="namebankintro">{nameBank}</span>
+      <span className="balancesaldo">Saldo disponivél: {balanceAccount}</span>
+      <span className="extratcvalue">Extrato: {valueExtract}</span>
       <span>Conta: {accountNumber}</span>
       <span>Agência: {agencyNumber}</span>
-      <span>Cartão Crédito: {valueCredit.cardNumber}</span>
+        <span className="cardcreditvalue">Cartão Crédito: {valueCredit.cardNumber}</span>
     </div>
   </li>
 )

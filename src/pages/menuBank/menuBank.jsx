@@ -11,7 +11,7 @@ import dinheiro from '../../assets/dinheiro.png'
 
 function MenuBank() {
 	const history = useHistory();
-	let { id } = useParams();
+	const { id } = useParams();
 	const [sac, setSac] = useState();
 
 	useEffect(() => {
@@ -28,7 +28,7 @@ function MenuBank() {
 	}, [id]);
 
 	function handleMenuBank() {
-		history.push(`/login/`);
+		history.push(`/extract/${id}`);
 	}
 
 	if (!sac) {

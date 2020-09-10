@@ -19,12 +19,12 @@ const Header = () => {
       .catch((e) => {
         alert("ocorreu um erro ao tentar obter os dados");
       });
-  }, [profile]);
+  }, []);
 
   return (
     <div className="container-inner">
       <div className="profile-photo">
-      <Image src={Usuario} alt="profile" className="profile-user" />
+        <Image src={Usuario} alt="profile" className="profile-user" />
       </div>
       {profile.map(item => (
         <div className="header-profile">

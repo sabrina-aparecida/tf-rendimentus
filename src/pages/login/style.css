@@ -1,0 +1,80 @@
+.login_background {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1E2044;
+}
+.logo{
+    position: absolute;
+    width: 257px;
+    height: 72px;
+    left: 57px;
+    top: 135px;
+    
+}
+.app_name {
+    position: absolute;
+    width: 229px;
+    height: 40px;
+    left: 103px;
+    top: 205px;
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    color: #FFFFFF;
+}
+.lead {
+    position: absolute;
+    width: 271px;
+    height: 24px;
+    left: 52px;
+    top: 286px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.email-input {
+    position: absolute;
+    width: 278px;
+    left: 45px;
+    top: 360px;
+    color:white;
+    background-color: #1E2044;
+    border-top:none;
+    border-right: none;
+    border-left: none;
+    border-bottom-color: #E3B15A;
+    outline: none;
+}
+.senha-input {
+    position: absolute;
+    width: 278px;
+    left: 45px;
+    top: 410px;
+    color:white;
+    background-color: #1E2044;
+    border-top:none;
+    border-right: none;
+    border-left: none;
+    border-bottom-color: #E3B15A;
+    outline: none;
+}
+.input-submit {
+    position: absolute;
+    width: 207px;
+    height: 42px;
+    left: 81px;
+    top: 474px;
+    background: #1E2044;
+    border: 3px solid #E3B15A;
+    box-sizing: border-box;
+    border-radius: 12px;
+    color:white;
+    font-style: bold;
+    outline: none;
+
+}

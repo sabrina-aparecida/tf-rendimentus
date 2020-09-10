@@ -1,0 +1,22 @@
+.container-iner{
+  width: 383px;
+  height: 89px;
+  left: -8px;
+  top: 47px;
+  background: rgba(30, 32, 68, 0.92);
+}
+.profile-photo{
+  width: 39px;
+
+}
+.profile-user{
+  width: 39px;
+  height: 38px;
+  left: 26px;
+  top: 72px;
+}
+.header-profile{
+  width: 39px;
+
+
+}

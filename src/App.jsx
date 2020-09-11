@@ -10,33 +10,37 @@ import Offers from './pages/offers';
 import MenuBank from './pages/menuBank/menuBank';
 import Extract from './pages/extrato/extrato';
 import Contract from './pages/creditos_operacoes/index'
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
 
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact={true}>
-          <Login />
-        </Route>
-        <Route path="/offers">
-          <Offers />
-        </Route>
-        <Route path="/listBank">
-          <ListBank />
-        </Route>
-        <Route path="/menuBank/:id">
-          <MenuBank />
-        </Route>
-        <Route path="/extract/:id">
-          <Extract />
-        </Route>
-        <Route path="/contract">
-          <Contract />
-        </Route>
-      </Switch>
-    </Router>
+    <>
+      <ToastContainer position="top-center" />
+      <Router>
+        <Switch>
+          <Route path="/" exact={true}>
+            <Login />
+          </Route>
+          <Route path="/offers">
+            <Offers />
+          </Route>
+          <Route path="/listBank">
+            <ListBank />
+          </Route>
+          <Route path="/menuBank/:id">
+            <MenuBank />
+          </Route>
+          <Route path="/extract/:id">
+            <Extract />
+          </Route>
+          <Route path="/contract">
+            <Contract />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 

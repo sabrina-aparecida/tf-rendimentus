@@ -7,7 +7,8 @@ export default function () {
   return (
     <>
       <Nav />
-      <span className="sub-title">Página em Construção!</span>
+      <div className="pages-error">Página em Construção!</div>
+
 
     </>
   )

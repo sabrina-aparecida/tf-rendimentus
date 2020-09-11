@@ -33,20 +33,29 @@ function Extrato() {
           <Nav link='/listBank'></Nav>
         </header>
       </div>
-      <span className="ola">Agencia: {extract.accounts[0].accountNumber}  Conta:{extract.accounts[0].agency}</span>
-      <div className="ola">
-        <span>Fatura Cartão de Credito</span>
-        <div><span>Descrição DataValor(R$) </span></div>
-        <ul className="info-extract">
+      <div className="agenc agenc_cc">
+        <span>Agencia: {extract.accounts[0].accountNumber}  Conta:{extract.accounts[0].agency}</span>
+      </div>
+      <div>
+        <div className="extract">
+          <span className="descricao">Fatura Cartão de Credito</span>
+          <div className="fatura">
+            <strong>Descrição</strong>
+            <strong>Data/Hora</strong>
+            <strong>Valor(R$)</strong>
+          </div>
+        </div>
+
+        <ul className="extract info-extract">
           {extract.accounts[0].accountExtract.map(item => (
-            <li>
+            <li className="descricao-fatura">
               <span>{item.name}</span>
               <span> {dateTimeFormat.format(new Date(item.date))}</span>
-              <span> {numberFormat.format(item.value)}</span>
+              <strong> {numberFormat.format(item.value)}</strong>
             </li>
           ))}
         </ul>
-        <span className="total-fatura">Total Fatuta: {extract.valueExtract}</span>
+        <strong className="total-fatura">Total Fatuta: {extract.valueExtract}</strong>
       </div>
 
 

@@ -12,6 +12,7 @@ function Offers() {
   const [order, setOrderby] = useState("rate|asc")
   const [loading, setLoading] = useState(true)
 
+
   useEffect(() => {
     setLoading(true);
     fetch('https://jsonbox.io/box_ddb0ab5da8d69da8c315/offers')
@@ -93,6 +94,24 @@ function Offers() {
             </ul>
         }
       </div>
+      {
+        loading ?
+          <div>carregando</div>
+          :
+          <ul className="offers" >
+            {offers.map(item => (
+              <Card_product
+                numBank={item.bank.cod}
+                nameBank={item.bank.name}
+                rate={item.rate}
+                value={item.value}
+                maxInstallments={item.maxInstallments}
+                onClick={handleHire}
+              />
+            ))}
+          </ul>
+      }
+
 
     </>
 

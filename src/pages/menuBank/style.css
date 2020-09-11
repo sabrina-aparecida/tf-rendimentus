@@ -13,6 +13,9 @@
     align-items: center;
 }
 .menu_options {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 14%;
     margin-bottom: 22%;
 }

@@ -52,7 +52,7 @@ function Offers() {
 
   function handleHire(item) {
     console.log(item)
-    toast.success(`produto ${item.name} contratado com sucesso!`)
+    toast.success("Sua solicitação foi enviada, logo entraremos em contato")
   }
 
   return (
@@ -88,31 +88,13 @@ function Offers() {
                   rate={item.rate}
                   value={item.value}
                   maxInstallments={item.maxInstallments}
+                  onClick={handleHire}
 
                 />
               ))}
             </ul>
         }
       </div>
-      {
-        loading ?
-          <div>carregando</div>
-          :
-          <ul className="offers" >
-            {offers.map(item => (
-              <Card_product
-                numBank={item.bank.cod}
-                nameBank={item.bank.name}
-                rate={item.rate}
-                value={item.value}
-                maxInstallments={item.maxInstallments}
-                onClick={handleHire}
-              />
-            ))}
-          </ul>
-      }
-
-
     </>
 
   )

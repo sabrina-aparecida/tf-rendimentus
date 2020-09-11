@@ -9,20 +9,21 @@ const Card_product = ({ numBank, nameBank, rate, value, maxInstallments, onClick
     <table>
       <tr >
         <td className="numBank" rowspan="5">{numBank}</td>
-        <td>{nameBank}</td>
+        <td className="nameBank">{nameBank}</td>
       </tr>
       <tr>
-        <td>Taxa de juros: {rate}%</td>
+      <td className="balancesaldo"><strong className="alt-name-card">Taxa de juros:</strong> {rate}%</td>
       </tr>
       <tr>
-        <td>Crédito pré aprovado: R$ {value},00</td>
+        <td className="balancesaldo"><strong className="alt-name-card">Credito:</strong> {value},00</td>
+
       </tr>
       <tr>
         <td>Parcelas: {maxInstallments}</td>
       </tr>
       <tr>
         <td>
-<button onClick={onClick} className="btnProposal">RECEBER PROPOSTA</button>
+          <button onClick={onClick} className="btnProposal">SOLICITAR PROPOSTA</button>
         </td>
       </tr>
     </table>

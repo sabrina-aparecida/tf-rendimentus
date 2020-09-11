@@ -1,0 +1,45 @@
+
+    .headerOffers{
+        background: rgba(30, 32, 68, 0.92);
+        margin-top: 49px;
+        position: fixed;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        line-height: 1.5;
+        width: 100%;
+    }  
+    .offers li {
+        margin: 10px 0;
+    }
+    .main{
+        padding-top: 125px;
+    }
+
+    @media only screen and (min-device-width: 768px) {
+        .headerOffers{
+            font-size: 100%;
+        }
+
+    }
+
+    @media only screen and (min-device-width: 980px) {
+        
+        .main {
+            padding-top: 160px;
+            width: 980px;
+            margin: auto;
+        }
+        .headerOffers p {
+            width: 980px;
+            margin: auto;
+        }
+    }
+
+

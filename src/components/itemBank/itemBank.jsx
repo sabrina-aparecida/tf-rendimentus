@@ -4,13 +4,16 @@ import './style.css'
 
 const ItemBank = ({ numBank, nameBank, balanceAccount, accountNumber, agencyNumber, valueCredit, onClick }) => (
   <li className="bank" onClick={onClick}>
-    <span>{numBank}</span>
+    <span className="numberbank">{numBank}</span>
     <div className="info-bank">
-      <span className="namebankintro">{nameBank}</span>
-      <span className="balancesaldo">Saldo: R${balanceAccount},00</span>
-      <span>Conta: {accountNumber}</span>
-      <span>Agência: {agencyNumber}</span>
-      <span className="cardcreditvalue">Fatura do Cartão Crédito: {valueCredit}</span>
+    <span className="namebankintro">{nameBank}</span>
+    <span><strong className="alt-name-card">Agência:</strong> {agencyNumber}
+      </span>
+      <span><strong className="alt-name-card">Conta:</strong> {accountNumber}
+      </span>
+      <span className="balancesaldo"><strong className="alt-name-card">Saldo:</strong> {balanceAccount}.00
+      </span>
+      <span className="cardcreditvalue"><strong className="alt-name-card">Fatura do Cartão Crédito:</strong> {valueCredit}</span>
     </div>
   </li>
 )

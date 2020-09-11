@@ -39,9 +39,9 @@ function OfferMessage() {
     {
     ((sum.totalExtract / sum.totalBalance * 100) >= 70)?
 
-    <div>
-Seu saldo atual é de R${sum.totalBalance}
-Consulte aqui nossos planos de créditos para facilitar sua vida e você não ficar sem dinheiro!
+    <div className="alert-message">
+Seu saldo atual é de R${sum.totalBalance}.
+Consulte nossos planos de créditos para facilitar sua vida e você não ficar sem dinheiro, compare nosso planos.<strong className="click"> CLIQUE AQUI!</strong>
     </div>
 
     :""

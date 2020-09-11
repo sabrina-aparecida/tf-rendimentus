@@ -11,8 +11,8 @@
     width: 257px;
     height: 72px;
     left: 57px;
-    margin-top: 50px;
-    padding: 5%;
+    margin-top: 40px;
+    padding: 2%;
     
 }
 .app_name {
@@ -26,8 +26,9 @@
     color: #FFFFFF;
 }
 .lead {
-    margin-top: 25px;
-    margin-bottom: 30px;    font-family: Arial;
+    margin-top: 20px;
+    margin-bottom: 8px;    
+    font-family: Arial;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -82,5 +83,37 @@
 
 }
 .header-logo {
+
+}
+
+@media only screen and (min-device-width: 470px) {
+    .senha-input {
+
+        font-size: 140%;
+    }
+    .input-submit {
+        font-size: 140%;
+    }
+    .email-input {
+        font-size: 140%;
+
+    }
+    .app_name {
+        font-size: 50px;
+
+    }
+    .lead {
+        margin-bottom: 50px;
+
+        font-size: 20px;
+
+    }
+    .header-logo {        
+        padding: 0%;
+        width: 257px;
+        height: 72px;
+    }
+    .logo {
+        margin-top: 140px    }
 
 }

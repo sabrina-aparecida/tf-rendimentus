@@ -5,7 +5,7 @@ import './style.css'
 
 const Card_product = ({ numBank, nameBank, rate, value, maxInstallments, onClick }) => (
 
-  <li className="offer" onclick={onClick}>
+  <li className="offer" onClick={onClick}>
     <table>
       <tr >
         <td className="numBank" rowspan="4">{numBank}</td>

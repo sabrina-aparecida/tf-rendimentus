@@ -15,6 +15,9 @@
   background: #1E2044;
   border: none;
 }
+button[type=submit]{
+  outline:none
+}
 .pages{
   width: 38vw;
   height: 8vh;

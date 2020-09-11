@@ -26,8 +26,8 @@ const Nav = () => {
               <button type="submit" className="pages">Contratos</button>
             </Link>
             <Link to="/">
-              <button type="submit" id="exit" className="btn-exit" onClick={() => firebase.auth().signOut()}>Sair</button>
-            </Link>
+{/*               <button type="submit" id="exit" className="btn-exit" onClick={() => firebase.auth().signOut()}>Sair</button>
+ */}            </Link>
             </div>
         )}
         </div>

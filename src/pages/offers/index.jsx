@@ -50,10 +50,10 @@ function Offers() {
       });
   }, [order]);
 
-  // function handleHire(item) {
-  //   console.log(item)
-  //   toast.success("Sua solicitação foi enviada, logo entraremos em contato")
-  // }
+  function handleHire(item) {
+    console.log(item)
+    toast.success("Sua solicitação foi enviada, logo entraremos em contato")
+  }
 
   return (
     <>
@@ -88,6 +88,7 @@ function Offers() {
                   rate={item.rate}
                   value={item.value}
                   maxInstallments={item.maxInstallments}
+                  onClick={handleHire}
 
                 />
               ))}

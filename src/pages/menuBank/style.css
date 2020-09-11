@@ -1,0 +1,17 @@
+.submit {
+    width: 8%;
+    height: 10%;
+    background-color: tomato;
+}
+.menu_with_icons {
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+}
+.menu_options {
+    margin-top: 30%;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,12 +1,13 @@
 import React from 'react';
 import Image from '../../components/image/image';
-
-const Button = ({ name, item, onClick, icon }) => {
+import './style.css'
+const Button = ({ name2,name, item, onClick, icon }) => {
   return (
     <div className="btn-options" onClick={onClick}>
-      <Image src={icon} alt="profile" className="profile-user" />
-      <span>{name}</span>
-      <span>{item}</span>
+      <Image src={icon} alt="profile" class="profile-user" />
+      <span class = "title">{name}</span>
+      <span class = "title">{name2}</span>
+      <span class = "subtitle">{item}</span>
     </div>
   )
 }

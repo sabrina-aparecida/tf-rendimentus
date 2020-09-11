@@ -25,14 +25,13 @@ const Header = () => {
 
   return (
     <div className="container-inner">
-      <div className="profile-photo">
-        <Image src={Usuario} alt="profile" class="profile-user" />
-      </div>
+        <Image src={Usuario} alt="profile" class="profile-user_header" />
       {profile.map((item, index) => (
         <div className="header-profile" key={index}>
           <span className="bold">
-            Olá,
+          Olá,&nbsp;&nbsp; 
           {item.name}
+
           </span>
           <span>
           {item.cpf}

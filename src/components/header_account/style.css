@@ -12,10 +12,11 @@
   background: rgba(30, 32, 68, 0.92);
 }
 
-
-.header-profile {
-  display: flex;
-  flex-direction: column;
+.profile-user{
+  width: 118%;
+    margin-left: 16px;
+}
+.header-profile{
   width: 100vw;
   margin-left: 50px;
   font-family: Montserrat;
@@ -23,13 +24,9 @@
   font-weight: normal;
   font-size: 13px;
   line-height: 26px;
-  /* align-items: center; */
+  align-items: center;
   color: #FFFFFF;
 }
 .bold{
   font-weight: bolder;
-}
-.profile-user_header {
-  width: 118%;
-    margin-left: 16px;
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, useParams } from "react-router-dom";
+import './style.css'
 
 import Nav from '../../components/nav/Nav';
 import Header from '../../components/header/Header'
@@ -42,8 +43,9 @@ function MenuBank() {
       </div>
       <Header />
       <span>Agencia: {sac.accounts[0].accountNumber}  Conta:{sac.accounts[0].agency}  </span>
-      <section>
-        <div>
+      <section className = "menu_options" >
+        <div className = "menu_with_icons">
+        <div >
           <Button
             icon={extrato}
             name="CRÉDITOS"
@@ -61,6 +63,9 @@ function MenuBank() {
             onClick={handleMenuBank}
           />
         </div>
+        </div>
+        <div className = "menu_with_icons">
+
         <div>
           <Button
             icon={dinheiro}
@@ -74,19 +79,23 @@ function MenuBank() {
           <Button
             icon={cartoes}
             name="OUTROS CARTÕES"
+            name2=""
             item="Bandeiras"
             className="submit"
             onClick={handleMenuBank}
           />
         </div>
+        </div>
       </section>
       <footer>
+        <div  className = "footer">
         <span> CANAIS DE ATENDIMENTO:</span>
         <span>Contato do Gerente:</span>
         <span>{sac.callCenter}</span>
         <span>{sac.accounts[0].accountManager.name}</span>
         <span>{sac.accounts[0].accountManager.email}</span>
         <span>{sac.accounts[0].accountManager.telefone}</span>
+        </div>
       </footer>
     </>
   )

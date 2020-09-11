@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .button_creditos {
   width: 100vw;
   height: 11vh;
@@ -8,7 +12,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
-  line-height: 10px;
+  line-height: 22px;
   display: flex;
   color: #FFFFFF;
   outline: none;

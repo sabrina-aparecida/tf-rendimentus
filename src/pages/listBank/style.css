@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .saldo{
 background-color: #1E2044;
 color:#FFFFFF;

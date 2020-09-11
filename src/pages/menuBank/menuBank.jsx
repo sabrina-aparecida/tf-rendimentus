@@ -27,10 +27,6 @@ function MenuBank() {
       });
   }, [id]);
 
-  function handleMenuBank() {
-    history.push(`/extract/${id}`);
-  }
-
   if (!sac) {
     return null;
   }
@@ -42,62 +38,64 @@ function MenuBank() {
         </header>
       </div>
       <Header />
-      <span>Agencia: {sac.accounts[0].accountNumber}  Conta:{sac.accounts[0].agency}  </span>
-      <section className = "menu_options" >
-        <div className = "menu_with_icons">
-        <div >
-          <Button
-            icon={extrato}
-            name="CRÉDITOS"
-            item="Contratos"
-            className="submit"
-            onClick={handleMenuBank}
-          />
+      <div className="agenc_cc">
+        <span>Agencia: {sac.accounts[0].accountNumber}  Conta:{sac.accounts[0].agency}  </span>
+      </div>
+      <section className="menu_options" >
+        <div className="menu_with_icons">
+          <div >
+            <Button
+              icon={extrato}
+              name="CRÉDITOS"
+              item="Contratos"
+              className="submit"
+              onClick={() => history.push(`/extract/${id}`)}
+            />
+          </div>
+          <div>
+            <Button
+              icon={cartoes}
+              name="CARTÕES"
+              item="Fatura"
+              className="submit"
+              onClick={() => history.push(`/error`)}
+            />
+          </div>
         </div>
-        <div>
-          <Button
-            icon={cartoes}
-            name="CARTÕES"
-            item="Fatura"
-            className="submit"
-            onClick={handleMenuBank}
-          />
-        </div>
-        </div>
-        <div className = "menu_with_icons">
+        <div className="menu_with_icons">
 
-        <div>
-          <Button
-            icon={dinheiro}
-            name="CONTRATAÇÕES"
-            item="Consultar"
-            className="submit"
-            onClick={() => history.push(`/contract`)}
-          />
+          <div>
+            <Button
+              icon={dinheiro}
+              name="CONTRATAÇÕES"
+              item="Consultar"
+              className="submit"
+              onClick={() => history.push(`/contract`)}
+            />
+          </div>
+          <div>
+            <Button
+              icon={cartoes}
+              name="OUTROS CARTÕES"
+              name2=""
+              item="Bandeiras"
+              className="submit"
+              onClick={() => history.push(`/error`)}
+            />
+          </div>
         </div>
-        <div>
-          <Button
-            icon={cartoes}
-            name="OUTROS CARTÕES"
-            name2=""
-            item="Bandeiras"
-            className="submit"
-            onClick={handleMenuBank}
-          />
-        </div>
-        </div>
-      </section>
-      <footer>
-        <div  className = "footer">
-        <span> CANAIS DE ATENDIMENTO:</span>
-        <span>Contato do Gerente:</span>
-        <span>{sac.callCenter}</span>
-        <span>{sac.accounts[0].accountManager.name}</span>
-        <span>{sac.accounts[0].accountManager.email}</span>
-        <span>{sac.accounts[0].accountManager.telefone}</span>
+        </section>
+      <footer className="footer-global">
+        <div className="footer">
+          <span> CANAIS DE ATENDIMENTO:</span>
+          <span>Contato do Gerente:</span>
+          <span>{sac.callCenter}</span>
+          <span>{sac.accounts[0].accountManager.name}</span>
+          <span>{sac.accounts[0].accountManager.email}</span>
+          <span>{sac.accounts[0].accountManager.telefone}</span>
         </div>
       </footer>
     </>
   )
 }
-export default MenuBank; 
+export default MenuBank;

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { numberFormat, dateTimeFormat } from "../../Util/util";
 
 import Nav from '../../components/nav/Nav';
+import './style.css';
 
 function Extrato() {
   let { id } = useParams();
@@ -32,18 +33,22 @@ function Extrato() {
           <Nav link='/listBank'></Nav>
         </header>
       </div>
-      <span>Agencia: {extract.accounts[0].accountNumber}  Conta:{extract.accounts[0].agency}  </span>
-      <span>Fatura Cartão de Credito</span>
-      <ul>
-        {extract.accounts[0].accountExtract.map(item => (
-          <li>
-            <span>{item.name}</span>
-            <span> {numberFormat.format(item.value)}</span>
-            <span> {dateTimeFormat.format(new Date(item.date))}</span>
-          </li>
-        ))}
-      </ul>
-      <span>Total Fatuta: {extract.valueExtract}</span>
+      <span className="ola">Agencia: {extract.accounts[0].accountNumber}  Conta:{extract.accounts[0].agency}</span>
+      <div className="ola">
+        <span>Fatura Cartão de Credito</span>
+        <div><span>Descrição DataValor(R$) </span></div>
+        <ul className="info-extract">
+          {extract.accounts[0].accountExtract.map(item => (
+            <li>
+              <span>{item.name}</span>
+              <span> {dateTimeFormat.format(new Date(item.date))}</span>
+              <span> {numberFormat.format(item.value)}</span>
+            </li>
+          ))}
+        </ul>
+        <span className="total-fatura">Total Fatuta: {extract.valueExtract}</span>
+      </div>
+
 
 
     </>

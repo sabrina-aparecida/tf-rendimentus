@@ -1,0 +1,20 @@
+.ola{
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.info-extract{
+  color:#1E2044;  
+  margin-left: 100px;
+}
+
+.total-fatura{
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  margin-left: 100px;
+  background-color: royalblue;
+
+}
+

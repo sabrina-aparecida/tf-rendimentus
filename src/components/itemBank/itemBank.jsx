@@ -7,7 +7,7 @@ const ItemBank = ({ numBank, nameBank, balanceAccount, accountNumber, agencyNumb
     <span>{numBank}</span>
     <div className="info-bank">
       <span className="namebankintro">{nameBank}</span>
-      <span className="balancesaldo">Saldo: R${balanceAccount},00</span>
+      <span className="balancesaldo">Saldo: {balanceAccount}.00</span>
       <span>Conta: {accountNumber}</span>
       <span>Agência: {agencyNumber}</span>
       <span className="cardcreditvalue">Fatura do Cartão Crédito: {valueCredit}</span>

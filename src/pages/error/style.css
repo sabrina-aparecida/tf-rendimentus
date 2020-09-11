@@ -1,0 +1,8 @@
+.pages-error{
+  font-family: Montserrat;  
+  display: flex;
+  justify-content: center;
+  padding-top: 300px;
+  color:#1E2044;
+  font-size: 20px;
+}

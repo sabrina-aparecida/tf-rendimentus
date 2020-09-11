@@ -57,24 +57,42 @@ function Offers() {
 
   return (
     <>
-    <Nav></Nav>
+      <Nav></Nav>
 
-<header className="headerOffers">
-  <p>
-Aqui você pode encontrar créditos e operações financeiras disponíveis de acordo com a sua necessidade, 
-consulte aqui qual instituição oferece a melhor condição para você!
+      <header className="headerOffers">
+        <p>
+          Aqui você pode encontrar créditos e operações financeiras disponíveis de acordo com a sua necessidade,
+          consulte aqui qual instituição oferece a melhor condição para você!
 </p>
-</header>
-<div className="main">
-      <h1><rotasTheader/></h1>
-      
-      <div>
-        <p className="text">Ordenar por:</p>
-        <select name="" id="" className="text" onChange={e => setOrderby(e.target.value)}>
-          <option value="rate|asc" >Menor taxa de juros</option>
-          <option value="value|desc" >Maior crédito</option>
-          <option value="maxInstallments|desc" >Maior parcelamento</option>
-        </select>
+      </header>
+      <div className="main">
+        <h1><rotasTheader /></h1>
+
+        <div>
+          <p className="text">Ordenar por:</p>
+          <select name="" id="" className="text" onChange={e => setOrderby(e.target.value)}>
+            <option value="rate|asc" >Menor taxa de juros</option>
+            <option value="value|desc" >Maior crédito</option>
+            <option value="maxInstallments|desc" >Maior parcelamento</option>
+          </select>
+        </div>
+        {
+          loading ?
+            <div>carregando</div>
+            :
+            <ul className="offers" >
+              {offers.map(item => (
+                <Card_product
+                  numBank={item.bank.cod}
+                  nameBank={item.bank.name}
+                  rate={item.rate}
+                  value={item.value}
+                  maxInstallments={item.maxInstallments}
+
+                />
+              ))}
+            </ul>
+        }
       </div>
       {
         loading ?
@@ -93,7 +111,7 @@ consulte aqui qual instituição oferece a melhor condição para você!
             ))}
           </ul>
       }
-    </div>
+
 
     </>
 

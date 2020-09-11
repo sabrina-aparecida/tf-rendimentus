@@ -1,0 +1,54 @@
+.agenc,
+.extract,
+.info-extract,
+.total-fatura{
+  font-family: Montserrat;
+  color:#1E2044; 
+}
+
+.agenc{
+  font-family: Montserrat;
+  padding-top: 50px;
+  font-size: 15px;
+}
+
+.extract{  
+  margin-left: 80px;
+  padding-top: 30px;
+}
+
+.info-extract{
+  font-family: Montserrat;
+  color:#1E2044;  
+  margin-left: 100px;
+}
+
+.total-fatura{
+  font-family: Montserrat;
+  display: flex;
+  justify-content: flex-end;
+  width: 85%;
+  margin-left: 80px;
+  background: rgba(202, 194, 177, 0.329);
+  margin-top: 50px;
+}
+
+.descricao{
+  font-size: 20px;
+}
+
+.fatura{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 35px;
+  text-align: center;
+}
+
+.descricao-fatura{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  text-align: center
+}
+
+

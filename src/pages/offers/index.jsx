@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Card_product from '../../components/card_product'
-import Header from '../../components/header/Header'
+import Nav from '../../components/nav/Nav';
+import './style.css'
+
+
 
 function Offers() {
   const [offers, setOffers] = useState([])
@@ -47,8 +50,17 @@ function Offers() {
   return (
 
     <>
+    <Nav></Nav>
 
+<header className="headerOffers">
+  <p>
+Aqui você pode encontrar créditos e operações financeiras disponíveis de acordo com a sua necessidade, 
+consulte aqui qual instituição oferece a melhor condição para você!
+</p>
+</header>
+<div className="main">
       <h1><rotasTheader/></h1>
+      
       <h2>Escolha a opção que mais se adequa a você:</h2>
 
       <div>
@@ -76,7 +88,7 @@ function Offers() {
             ))}
           </ul>
       }
-
+</div>
     </>
 
   )

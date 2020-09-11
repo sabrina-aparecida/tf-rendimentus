@@ -1,22 +1,23 @@
 .login_background {
-    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
     background-color: #1E2044;
+    align-items: center;
 }
 .logo{
-    position: absolute;
+ 
     width: 257px;
     height: 72px;
     left: 57px;
-    top: 135px;
+    margin-top: 40px;
+    padding: 2%;
     
 }
 .app_name {
-    position: absolute;
-    width: 229px;
-    height: 40px;
-    left: 103px;
-    top: 205px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     font-family: Montserrat;
     font-style: italic;
     font-weight: bold;
@@ -25,11 +26,8 @@
     color: #FFFFFF;
 }
 .lead {
-    position: absolute;
-    width: 271px;
-    height: 24px;
-    left: 52px;
-    top: 286px;
+    margin-top: 20px;
+    margin-bottom: 8px;    
     font-family: Arial;
     font-style: normal;
     font-weight: normal;
@@ -38,10 +36,10 @@
     color: #FFFFFF;
 }
 .email-input {
-    position: absolute;
+/*     position: absolute;
     width: 278px;
     left: 45px;
-    top: 360px;
+    top: 360px; */
     color:white;
     background-color: #1E2044;
     border-top:none;
@@ -49,12 +47,13 @@
     border-left: none;
     border-bottom-color: #E3B15A;
     outline: none;
+    padding: 10%;
+    margin-bottom: 10px;
+    
+
+
 }
 .senha-input {
-    position: absolute;
-    width: 278px;
-    left: 45px;
-    top: 410px;
     color:white;
     background-color: #1E2044;
     border-top:none;
@@ -62,13 +61,10 @@
     border-left: none;
     border-bottom-color: #E3B15A;
     outline: none;
+    padding: 10%;
+    margin-bottom: 30px;
 }
 .input-submit {
-    position: absolute;
-    width: 207px;
-    height: 42px;
-    left: 81px;
-    top: 474px;
     background: #1E2044;
     border: 3px solid #E3B15A;
     box-sizing: border-box;
@@ -76,5 +72,48 @@
     color:white;
     font-style: bold;
     outline: none;
+    padding: 10%;
+    margin-bottom: 30px;
+
+}
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.header-logo {
+
+}
+
+@media only screen and (min-device-width: 470px) {
+    .senha-input {
+
+        font-size: 140%;
+    }
+    .input-submit {
+        font-size: 140%;
+    }
+    .email-input {
+        font-size: 140%;
+
+    }
+    .app_name {
+        font-size: 50px;
+
+    }
+    .lead {
+        margin-bottom: 50px;
+
+        font-size: 20px;
+
+    }
+    .header-logo {        
+        padding: 0%;
+        width: 257px;
+        height: 72px;
+    }
+    .logo {
+        margin-top: 140px    }
 
 }

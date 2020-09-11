@@ -48,11 +48,11 @@ const BankOptions = () => {
                             <button className="button_creditos">{item.offerContracted.bank.cod} - {item.offerContracted.bank.name} </button>
                             <div className="options_box">
                                 <div className="options">
-                                    <span>{item.offerContracted.name}</span>
-                                    <span>{item.offerContracted.type}</span>
-                                    <span>{item.offerContracted.rate}</span>
-                                    <span>{item.offerContracted.value}</span>
-                                    <span>{item.offerContracted.maxInstallments}</span>
+                                    <span><strong>Descrição: </strong> {item.offerContracted.name}</span>
+                                    <span><strong>Tipo da Oferta:</strong> {item.offerContracted.type}</span>
+                                    <span><strong>Taxa de Juros:</strong> {item.offerContracted.rate}</span>
+                                    <span><strong>Valor dos Juros:</strong> {item.offerContracted.value}</span>
+                                    <span><strong>Parcelas:</strong> {item.offerContracted.maxInstallments}</span>
                                 </div>
                             </div>
                         </div>

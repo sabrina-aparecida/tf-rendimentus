@@ -1,11 +1,13 @@
-
+* {
+    margin: 0;
+    padding: 0;
+}
     .headerOffers{
+        height: 15vh;
         background: rgba(30, 32, 68, 0.92);
         margin-top: 49px;
         position: fixed;
         font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
         font-size: 13px;
         line-height: 17px;
         display: flex;
@@ -14,15 +16,17 @@
         color: #FFFFFF;
         line-height: 1.5;
         width: 100%;
+        height: 15vh;
     }  
     .offers li {
-        margin: 10px 0;
+        margin: 16px 23px;
     }
     .offers li td{
         margin: 10px 0;
     }
     .main{
-        padding-top: 125px;
+        font-family: Montserrat;
+        padding-top: 153px;
     }
 
     @media only screen and (min-device-width: 768px) {
@@ -35,7 +39,7 @@
     @media only screen and (min-device-width: 980px) {
         
         .main {
-            padding-top: 160px;
+            padding-top: 200px;
             width: 980px;
             margin: auto;
         }

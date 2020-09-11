@@ -1,17 +1,31 @@
-
+* {
+  margin: 0;
+  padding: 0;
+}
 .offers{
   list-style-type: none;
 }
 
 .offer{
-  border: 2px #E3B15A solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  line-height: 30px;
+  height: 164px;
+  font-family: Montserrat;
+  font-size: 13px;
+  margin: auto;
+  overflow: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  box-shadow: 1px 3px 5px black;
+  background: rgba(202, 194, 177, 0.329);
 }
 
 .numBank{
-  background-color: #1E2044;
-  color: white;
+  color: black;
   min-width: 76px;
-  text-align: center;
 }
 
 

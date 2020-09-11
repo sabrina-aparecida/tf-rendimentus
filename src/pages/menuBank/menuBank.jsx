@@ -76,7 +76,7 @@ function MenuBank() {
             name="OUTROS CARTÕES"
             item="Bandeiras"
             className="submit"
-            onClick={handleMenuBank}
+            onClick={() => history.push(`/error`)}
           />
         </div>
       </section>

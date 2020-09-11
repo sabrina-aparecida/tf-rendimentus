@@ -10,6 +10,7 @@ import Offers from './pages/offers';
 import MenuBank from './pages/menuBank/menuBank';
 import Extract from './pages/extrato/extrato';
 import Contract from './pages/creditos_operacoes/index'
+import Error from './pages/error/404'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route path="/contract">
             <Contract />
+          </Route>
+          <Route path="/error">
+            <Error />
           </Route>
         </Switch>
       </Router>

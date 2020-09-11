@@ -32,12 +32,13 @@ const Header = () => {
       {profile.map((item, index) => (
         <div className="header-profile" key={index}>
           <span className="bold">
-            Olá,
-          {item.name}
+          {`Olá, ${item.name}`}
           </span>
+
           <span>
             {cpfMask(item.cpf)}
           </span>
+
         </div>
       )
       )}

@@ -3,22 +3,40 @@ background-color: #1E2044;
 color:#FFFFFF;
 }
 .totalcreditc{
+    width: 100vw;
+    font-family: Montserrat;
     position: fixed;
     bottom: 0px;
-    height: 15vh;
+    height: 11vh;
     background-color: #1E2044;
-}
-.list-card-bank{
-    margin-top: 114px;
+color: #FFFFFF;
+
 }
 .message{
+    font-size: 14px;
+    text-align: -webkit-center;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 350px;
-    height: 90px;
-    font-family: 'Roboto Slab', serif;
-    background-color: #de3163;
+    width: 100vw;
+    height: 15vh;
+    font-family: Montserrat;
+    background-color: #E6D422;
     margin: auto;
+    }
+
+    h5{
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .click{
+    color: red;
+    display: flex;
+    justify-content: center;
+    }
+    .alert-message{
+      margin: 2px;
     }

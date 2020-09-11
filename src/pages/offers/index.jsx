@@ -61,8 +61,6 @@ consulte aqui qual instituição oferece a melhor condição para você!
 <div className="main">
       <h1><rotasTheader/></h1>
       
-      <h2>Escolha a opção que mais se adequa a você:</h2>
-
       <div>
         <p>Ordenar por:</p>
         <select name="" id="" onChange={e => setOrderby(e.target.value)}>

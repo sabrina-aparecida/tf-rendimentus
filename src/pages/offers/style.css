@@ -18,6 +18,9 @@
     .offers li {
         margin: 10px 0;
     }
+    .offers li td{
+        margin: 10px 0;
+    }
     .main{
         padding-top: 125px;
     }

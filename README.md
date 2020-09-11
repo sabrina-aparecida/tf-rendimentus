@@ -1,68 +1,74 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Talent Fest 2020 - Safra Rendimentus
 
-## Available Scripts
+Para acessar a página [clique aqui]().
 
-In the project directory, you can run:
+```sh
+Login: jose.silva@email.com
+Senha: 123456
+```
+## Índice
 
-### `npm start`
+  - [1. Desafio Safra](#1-desafio-safra)
+  - [2. Solução](#2-solução)
+  - [3. Interface](#3-interface)
+  - [4. Tecnologias](#4-tecnologias)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 1. Desafio Safra
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Projeto Rendimentus para organização das suas contas e cartões. Em uma única plataforma, faça a gestão do seu dinheiro e conheça as ofertas de produtos e serviços disponíveis pelas instituições. Depois de conferir as ofertas e escolher aquelas que têm mais a ver com você e com seu momento de vida, através de um clique, você pode iniciar uma conversa com o time de atendimento da instituição para negociar as condições e adquirir o seu produto.
 
-### `npm test`
+## 2. Solução
+Para a solução do desafio nós criamos um dashboard  baseadas nas necessidades do usuários em visualizar todas as contas  existentes de varias instituintes financeiras. Além de poder acessá-las e controlar seus gastos e obter soluções quando seu crédito for inferior a sua movimentara bancaria.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 3. Interface
 
-### `npm run build`
+## 4. Tecnologias 
+ 
+ - React
+ - Javascript
+  
+## 5. Considerações técnicas
+### Instalação e execução.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```sh
+git clone (link-do-repositório)
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Instale as dependências do projeto com o comando:
 
-### `npm run eject`
+```sh
+yarn install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Rode o projeto na sua máquina com:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- E visualize o projeto no seu navegador com o link:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```sh
+http://localhost:3000
+```
 
-## Learn More
+## 6. Implementações futuras        
+          
+Futuramente serão implementadas funcionalidades para melhoria da experiência do usuário:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Bancos do cliente definido por cor especifica;
+- Filtrar melhor proposta de crérito de acordo com o perfil do usúario
+  
+  ## 7. Autoria
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Este projeto foi feito por [Alessandra Marinho](https://github.com/alessandramarinho),
+[Karine Sardela](https://github.com/kfsardela),
+ [Mariana Barros](https://github.com/MarianaMBarros) e
+ [Sabrina Martins](https://github.com/sabrina-aparecida), com base nos aprendizados desenvolvido ao longo do Bootcamp da [Laboratoria](https://github.com/Laboratoria).
 
-### Code Splitting
+## 8. Agradecimentos
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [Laboratoria](https://github.com/Laboratoria)
+- [Safra](https://www.safra.com.br/)

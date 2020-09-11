@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.submit {
+    width: 8%;
+    height: 10%;
+    background-color: tomato;
+}
+.menu_with_icons {
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+}
+.menu_options {
+    margin-top: 14%;
+    margin-bottom: 22%;
+}
+.footer {
+    width: 100vw;
+    height: 16vh;
+    background: rgba(30, 32, 68, 0.92);
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+}
+.footer-global{
+    position: fixed;
+    bottom: 0px;
+}
+.agenc_cc{
+    display: flex;
+    align-items: center;
+    font-family: Montserrat;
+    width: 100vw;
+    height: 6vh;
+    background: #CAC2B1;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+}

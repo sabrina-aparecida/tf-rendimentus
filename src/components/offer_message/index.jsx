@@ -48,7 +48,7 @@ function OfferMessage() {
 
     <div className="alert-message">
 Seu saldo atual é de R${sum.totalBalance}.
-Consulte nossos planos de créditos para facilitar sua vida e você não ficar sem dinheiro, compare nosso planos.<strong> CLIQUE AQUI!</strong>
+Consulte nossos planos de créditos para facilitar sua vida e você não ficar sem dinheiro, compare nosso planos.<strong className="click"> CLIQUE AQUI!</strong>
     </div>
 
     :""

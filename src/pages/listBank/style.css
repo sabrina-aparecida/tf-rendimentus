@@ -32,7 +32,7 @@ color: #FFFFFF;
       justify-content: center;
       margin-top: 20px;
     }
-    strong{
+    .click{
     color: red;
     display: flex;
     justify-content: center;

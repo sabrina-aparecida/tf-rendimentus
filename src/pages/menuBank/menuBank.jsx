@@ -67,7 +67,7 @@ function MenuBank() {
             name="CONTRATAÇÕES"
             item="Consultar"
             className="submit"
-            onClick={handleMenuBank}
+            onClick={() => history.push(`/contract`)}
           />
         </div>
         <div>

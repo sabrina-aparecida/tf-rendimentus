@@ -63,7 +63,7 @@ function ListBank() {
             />))}
         </ul>
         <div className="totalcreditc">
-          <span className="saldo">SALDO DISPONÍVEL DE TODAS AS CONTAS:  {numberFormat.format(balanceAccounts)} </span>
+          <h5>{`TOTAL DAS SUAS CONTAS: ${numberFormat.format(balanceAccounts)}`} </h5>
         </div>
       </div>
     </>

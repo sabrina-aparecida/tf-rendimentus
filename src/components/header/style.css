@@ -3,10 +3,9 @@
   padding: 0;
 }
 .container-inner{
-  position: fixed;
-    top: 33px;
+  margin-top: 30px;
   width: 100vw;
-  height: 11vh;
+  height: 14vh;
   display: flex;
   align-items: center;
   background: rgba(30, 32, 68, 0.92);

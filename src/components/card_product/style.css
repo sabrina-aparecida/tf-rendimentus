@@ -1,17 +1,51 @@
-
+* {
+  margin: 0;
+  padding: 0;
+}
 .offers{
   list-style-type: none;
 }
 
 .offer{
-  border: 2px #E3B15A solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  line-height: 30px;
+  height: 164px;
+  font-family: Montserrat;
+  font-size: 13px;
+  margin: auto;
+  overflow: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  box-shadow: 1px 3px 5px black;
+  background: rgba(202, 194, 177, 0.329);
 }
 
 .numBank{
-  background-color: #1E2044;
-  color: white;
+  color: black;
   min-width: 76px;
-  text-align: center;
 }
+
+.btnProposal{
+  
+  background-color:#44A45F ;
+  border: 1px solid #CCCCCE;
+  border-radius: 3px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .3),
+                0 2px 7px rgba(0, 0, 0, 0.2);
+  color: black;
+  font-family: Montserrat;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 5px 15px;
+  position: relative;
+  width: 154px;
+  margin-bottom: 10px;
+
+}
+
+
 
 

@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 .login_background {
     display: flex;
     flex-direction: column;
@@ -79,9 +83,7 @@
     align-items: center;
 
 }
-.header-logo {
 
-}
 
 @media only screen and (min-device-width: 470px) {
     .senha-input {

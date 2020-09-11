@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from "react-toastify";
+
 import Card_product from '../../components/card_product'
 import Nav from '../../components/nav/Nav';
 import './style.css'
@@ -9,6 +11,7 @@ function Offers() {
   const [offers, setOffers] = useState([])
   const [order, setOrderby] = useState("rate|asc")
   const [loading, setLoading] = useState(true)
+
 
   useEffect(() => {
     setLoading(true);
@@ -47,8 +50,12 @@ function Offers() {
       });
   }, [order]);
 
-  return (
+  function handleHire(item) {
+    console.log(item)
+    toast.success(`produto ${item.name} contratado com sucesso!`)
+  }
 
+  return (
     <>
     <Nav></Nav>
 
@@ -61,14 +68,12 @@ consulte aqui qual instituição oferece a melhor condição para você!
 <div className="main">
       <h1><rotasTheader/></h1>
       
-      <h2>Escolha a opção que mais se adequa a você:</h2>
-
       <div>
-        <p>Ordenar por:</p>
-        <select name="" id="" onChange={e => setOrderby(e.target.value)}>
-          <option value="rate|asc">Menor taxa de juros</option>
-          <option value="value|desc">Maior crédito</option>
-          <option value="maxInstallments|desc">Maior parcelamento</option>
+        <p className="text">Ordenar por:</p>
+        <select name="" id="" className="text" onChange={e => setOrderby(e.target.value)}>
+          <option value="rate|asc" >Menor taxa de juros</option>
+          <option value="value|desc" >Maior crédito</option>
+          <option value="maxInstallments|desc" >Maior parcelamento</option>
         </select>
       </div>
       {
@@ -83,12 +88,13 @@ consulte aqui qual instituição oferece a melhor condição para você!
                 rate={item.rate}
                 value={item.value}
                 maxInstallments={item.maxInstallments}
-
+                onClick={handleHire}
               />
             ))}
           </ul>
       }
-</div>
+    </div>
+
     </>
 
   )

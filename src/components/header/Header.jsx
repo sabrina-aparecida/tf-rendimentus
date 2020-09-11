@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Usuario from '../../assets/usuario.png';
 import Image from '../image/image';
 import './style.css'
+import { cpfMask } from '../../Util/util'
 
 
 const Header = () => {
@@ -29,13 +30,13 @@ const Header = () => {
       {profile.map((item, index) => (
         <div className="header-profile" key={index}>
           <span className="bold">
-          Olá,&nbsp;&nbsp; 
-          {item.name}
+          {`Olá, ${item.name}`}
+          </span>
 
-          </span>
           <span>
-          {item.cpf}
+            {cpfMask(item.cpf)}
           </span>
+
         </div>
       )
       )}

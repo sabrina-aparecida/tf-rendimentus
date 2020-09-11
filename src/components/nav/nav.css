@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .menu-hamburger{
   max-width: 41px;
   width: 100vw;
@@ -8,16 +12,20 @@
 }
 .btn-pages{
   width: 4vw;
-  height: 5vh;
+  height: 4vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #1E2044;
   border: none;
 }
+button[type=submit]{
+  outline:none
+}
 .pages{
   width: 38vw;
   height: 8vh;
+  display: block;
   margin-top: 0px;
   margin-bottom: 0px;
   border-radius: 0px;
@@ -26,26 +34,29 @@
   font-weight: bolder
 }
 .logo-nav{
-  width: 36%;
-  display: flex;
+  height: 27px;
+  top: 5px;
 }
+
+.menu{
+  top: 0%;
+  background: #1E2044;
+  position: fixed;
+  width: 100%;
+  height: 49px;
+  z-index: 1;
+}
+
+.main-nav{
+  position: relative;
+}
+
 .listener{
-  width: 4vw;
-  height: 6vh;
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  left: 10px;
+  top: -9px;
 }
 .listener2{
-  display: flex;
-  justify-content: flex-end;
-}
-.menu-burger{
-  position: fixed;
-  top: 0px;
-  justify-content: space-around;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  background: #1E2044;
-
+  text-align: center;
+  margin-top: 9px;
 }

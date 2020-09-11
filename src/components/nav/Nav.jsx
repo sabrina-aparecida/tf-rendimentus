@@ -12,31 +12,33 @@ const Nav = () => {
     setOpen(!open);
   };
   return (
-    <nav className="menu-burger">
-      <div className="listener">
-        <button type="submit" onClick={menuOpen} className="btn-pages">
-          <Image src={menu} alt="menu" class="menu-hamburger" />
-        </button>
-        {open && (
-          <div>
-            <Link to="/listBank">
-              <button type="submit" className="pages">Home</button>
-            </Link>
-            <Link to="/offers">
-              <button type="submit" className="pages">Créditos</button>
-            </Link>
-            <Link to="/contract">
-              <button type="submit" className="pages">Contratos</button>
-            </Link>
-            <Link to="/">
-              <button type="submit" className="pages">Sair</button>
-            </Link>
+    <nav className="menu">
+      <div className="main-nav">
+        <div className="listener">
+          <button type="submit" onClick={menuOpen} className="btn-pages">
+            <Image src={menu} alt="menu" class="menu-hamburger" />
+          </button>
+          {open && (
+            <div>
+              <Link to="/listBank">
+                <button type="submit" className="pages">Home</button>
+              </Link>
+              <Link to="/offers">
+                <button type="submit" className="pages">Créditos</button>
+              </Link>
+              <Link to="/contract">
+                <button type="submit" className="pages">Contratos</button>
+              </Link>
+              <Link to="/">
+                <button type="submit" className="pages">Sair</button>
+              </Link>
+            </div>
+          )}
           </div>
-        )}
-        </div>
         <div className="listener2">
           <Image src={logo} alt="logo-nav" class="logo-nav" />
         </div>
+      </div>
     </nav>
   );
 };

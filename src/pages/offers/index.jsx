@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from "react-toastify";
+
 import Card_product from '../../components/card_product'
 import Nav from '../../components/nav/Nav';
 import './style.css'
@@ -47,8 +49,12 @@ function Offers() {
       });
   }, [order]);
 
-  return (
+  function handleHire(item) {
+    console.log(item)
+    toast.success(`produto ${item.name} contratado com sucesso!`)
+  }
 
+  return (
     <>
     <Nav></Nav>
 
@@ -61,8 +67,6 @@ consulte aqui qual instituição oferece a melhor condição para você!
 <div className="main">
       <h1><rotasTheader/></h1>
       
-      <h2>Escolha a opção que mais se adequa a você:</h2>
-
       <div>
         <p>Ordenar por:</p>
         <select name="" id="" onChange={e => setOrderby(e.target.value)}>
@@ -71,24 +75,7 @@ consulte aqui qual instituição oferece a melhor condição para você!
           <option value="maxInstallments|desc">Maior parcelamento</option>
         </select>
       </div>
-      {
-        loading ?
-          <div>carregando</div>
-          :
-          <ul className="offers" >
-            {offers.map(item => (
-              <Card_product
-                numBank={item.bank.cod}
-                nameBank={item.bank.name}
-                rate={item.rate}
-                value={item.value}
-                maxInstallments={item.maxInstallments}
-
-              />
-            ))}
-          </ul>
-      }
-</div>
+    </div>
     </>
 
   )

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Usuario from '../../assets/usuario.png';
 import Image from '../image/image';
 import './style.css'
+import { cpfMask } from '../../Util/util'
 
 
 const Header = () => {
@@ -33,9 +34,11 @@ const Header = () => {
           <span className="bold">
           {`Olá, ${item.name}`}
           </span>
-          <li className="item-cpf">
-          {item.cpf}
-          </li>
+
+          <span>
+            {cpfMask(item.cpf)}
+          </span>
+
         </div>
       )
       )}

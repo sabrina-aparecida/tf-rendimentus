@@ -14,6 +14,7 @@ Senha: 123456
   - [4. Tecnologias](#4-tecnologias)
 
 ## 1. Desafio Safra
+Esta aplicação foi desenvolvida durante o Talent Fest, evento no formato hackathon realizado ao final do bootcamp da Laboratoria, onde as alunas desenvolvem aplicações propostas por empresas participantes ao longo de três dias. Este projeto foi proposto como desafio pelo Banco Safra.
 
 Projeto Rendimentus para organização das suas contas e cartões. Em uma única plataforma, faça a gestão do seu dinheiro e conheça as ofertas de produtos e serviços disponíveis pelas instituições. Depois de conferir as ofertas e escolher aquelas que têm mais a ver com você e com seu momento de vida, através de um clique, você pode iniciar uma conversa com o time de atendimento da instituição para negociar as condições e adquirir o seu produto.
 

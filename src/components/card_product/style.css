@@ -28,4 +28,24 @@
   min-width: 76px;
 }
 
+.btnProposal{
+  
+  background-color:#44A45F ;
+  border: 1px solid #CCCCCE;
+  border-radius: 3px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .3),
+                0 2px 7px rgba(0, 0, 0, 0.2);
+  color: black;
+  font-family: Montserrat;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 5px 15px;
+  position: relative;
+  width: 154px;
+  margin-bottom: 10px;
+
+}
+
+
+
 

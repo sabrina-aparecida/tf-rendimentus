@@ -5,10 +5,10 @@ import './style.css'
 
 const Card_product = ({ numBank, nameBank, rate, value, maxInstallments, onClick }) => (
 
-  <li className="offer" onClick={onClick}>
+  <li className="offer" >
     <table>
       <tr >
-        <td className="numBank" rowspan="4">{numBank}</td>
+        <td className="numBank" rowspan="5">{numBank}</td>
         <td>{nameBank}</td>
       </tr>
       <tr>
@@ -20,7 +20,13 @@ const Card_product = ({ numBank, nameBank, rate, value, maxInstallments, onClick
       <tr>
         <td>Parcelas: {maxInstallments}</td>
       </tr>
+      <tr>
+        <td>
+<button onClick={onClick} className="btnProposal">RECEBER PROPOSTA</button>
+        </td>
+      </tr>
     </table>
+    
   </li>
 
 )

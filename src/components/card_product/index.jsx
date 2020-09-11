@@ -12,10 +12,10 @@ const Card_product = ({ numBank, nameBank, rate, value, maxInstallments, onClick
         <td>{nameBank}</td>
       </tr>
       <tr>
-        <td>Taxa de juros: {rate}</td>
+        <td>Taxa de juros: {rate}%</td>
       </tr>
       <tr>
-        <td>Crédito pré aprovado: {value}</td>
+        <td>Crédito pré aprovado: R$ {value},00</td>
       </tr>
       <tr>
         <td>Parcelas: {maxInstallments}</td>

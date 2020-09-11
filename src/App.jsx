@@ -9,6 +9,7 @@ import ListBank from './pages/listBank/listBank';
 import Offers from './pages/offers';
 import MenuBank from './pages/menuBank/menuBank';
 import Extract from './pages/extrato/extrato';
+import Contract from './pages/creditos_operacoes/index'
 
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route path="/extract/:id">
           <Extract />
+        </Route>
+        <Route path="/contract">
+          <Contract />
         </Route>
       </Switch>
     </Router>

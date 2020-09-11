@@ -23,10 +23,14 @@
     }
     .offers li td{
         margin: 10px 0;
+        width: 50%;
+    }
+    .offers li table{
+        width: 100%;
     }
     .main{
         font-family: Montserrat;
-        padding-top: 153px;
+        padding-top: 173px;
     }
 
     @media only screen and (min-device-width: 768px) {

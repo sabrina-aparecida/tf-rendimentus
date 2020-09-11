@@ -68,14 +68,32 @@ consulte aqui qual instituição oferece a melhor condição para você!
       <h1><rotasTheader/></h1>
       
       <div>
-        <p>Ordenar por:</p>
-        <select name="" id="" onChange={e => setOrderby(e.target.value)}>
-          <option value="rate|asc">Menor taxa de juros</option>
-          <option value="value|desc">Maior crédito</option>
-          <option value="maxInstallments|desc">Maior parcelamento</option>
+        <p className="text">Ordenar por:</p>
+        <select name="" id="" className="text" onChange={e => setOrderby(e.target.value)}>
+          <option value="rate|asc" >Menor taxa de juros</option>
+          <option value="value|desc" >Maior crédito</option>
+          <option value="maxInstallments|desc" >Maior parcelamento</option>
         </select>
       </div>
+      {
+        loading ?
+          <div>carregando</div>
+          :
+          <ul className="offers" >
+            {offers.map(item => (
+              <Card_product
+                numBank={item.bank.cod}
+                nameBank={item.bank.name}
+                rate={item.rate}
+                value={item.value}
+                maxInstallments={item.maxInstallments}
+
+              />
+            ))}
+          </ul>
+      }
     </div>
+
     </>
 
   )

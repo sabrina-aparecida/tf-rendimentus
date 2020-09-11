@@ -12,6 +12,7 @@ function Offers() {
   const [order, setOrderby] = useState("rate|asc")
   const [loading, setLoading] = useState(true)
 
+
   useEffect(() => {
     setLoading(true);
     fetch('https://jsonbox.io/box_ddb0ab5da8d69da8c315/offers')
@@ -87,7 +88,7 @@ consulte aqui qual instituição oferece a melhor condição para você!
                 rate={item.rate}
                 value={item.value}
                 maxInstallments={item.maxInstallments}
-
+                onClick={handleHire}
               />
             ))}
           </ul>

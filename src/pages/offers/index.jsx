@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from "react-toastify";
+
 import Card_product from '../../components/card_product'
 import Nav from '../../components/nav/Nav';
 import './style.css'
@@ -47,52 +49,53 @@ function Offers() {
       });
   }, [order]);
 
+  function handleHire(item) {
+    console.log(item)
+    toast.success(`produto ${item.name} contratado com sucesso!`)
+  }
+
   return (
-
     <>
-    <Nav></Nav>
+      <Nav></Nav>
 
-<<<<<<< HEAD
-      <h1><rotasTheader /></h1>
-=======
-<header className="headerOffers">
-  <p>
-Aqui você pode encontrar créditos e operações financeiras disponíveis de acordo com a sua necessidade, 
-consulte aqui qual instituição oferece a melhor condição para você!
-</p>
-</header>
-<div className="main">
-      <h1><rotasTheader/></h1>
-      
->>>>>>> d9cdecc6088a5c83cccb13acbe7057db41a13935
-      <h2>Escolha a opção que mais se adequa a você:</h2>
+      <header className="headerOffers">
+        <p>
+          Aqui você pode encontrar créditos e operações financeiras disponíveis de acordo com a sua necessidade,
+          consulte aqui qual instituição oferece a melhor condição para você!
+        </p>
+      </header>
+      <div className="main">
+        <h1><rotasTheader /></h1>
 
-      <div>
-        <p>Ordenar por:</p>
-        <select name="" id="" onChange={e => setOrderby(e.target.value)}>
-          <option value="rate|asc">Menor taxa de juros</option>
-          <option value="value|desc">Maior crédito</option>
-          <option value="maxInstallments|desc">Maior parcelamento</option>
-        </select>
+        <h2>Escolha a opção que mais se adequa a você:</h2>
+
+        <div>
+          <p>Ordenar por:</p>
+          <select name="" id="" onChange={e => setOrderby(e.target.value)}>
+            <option value="rate|asc">Menor taxa de juros</option>
+            <option value="value|desc">Maior crédito</option>
+            <option value="maxInstallments|desc">Maior parcelamento</option>
+          </select>
+        </div>
+        {
+          loading ?
+            <div>carregando</div>
+            :
+            <ul className="offers" >
+              {offers.map(item => (
+                <Card_product
+                  numBank={item.bank.cod}
+                  nameBank={item.bank.name}
+                  rate={item.rate}
+                  value={item.value}
+                  maxInstallments={item.maxInstallments}
+                  onClick={() => handleHire(item)}
+
+                />
+              ))}
+            </ul>
+        }
       </div>
-      {
-        loading ?
-          <div>carregando</div>
-          :
-          <ul className="offers" >
-            {offers.map(item => (
-              <Card_product
-                numBank={item.bank.cod}
-                nameBank={item.bank.name}
-                rate={item.rate}
-                value={item.value}
-                maxInstallments={item.maxInstallments}
-
-              />
-            ))}
-          </ul>
-      }
-</div>
     </>
 
   )

@@ -23,7 +23,7 @@ const Card_product = ({ numBank, nameBank, rate, value, maxInstallments, onClick
       </tr>
       <tr>
         <td>
-<button onClick={onClick} className="btnProposal">RECEBER PROPOSTA</button>
+          <button onClick={onClick} className="btnProposal">SOLICITAR PROPOSTA</button>
         </td>
       </tr>
     </table>
